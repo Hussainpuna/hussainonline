@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Admin | Hussain Punawala</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --red: #8F1D2C;
+  --red2: #C53B4A;
+  --blue: #65BCE8;
+  --blue2: #D9ECFA;
+  --ink: #101923;
+  --muted: #657889;
+  --line: rgba(16,25,35,0.12);
+  --panel: #FFFFFF;
+  --bg: #F8FCFF;
+  --soft: #EEF7FF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+button, input, textarea { font-family: inherit; }
+
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(101,188,232,0.34), transparent 34%),
+    radial-gradient(circle at 82% 74%, rgba(143,29,44,0.16), transparent 32%),
+    var(--bg);
+}
+.login-panel {
+  width: min(430px, 100%);
+  background: rgba(255,255,255,0.96);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(42,86,112,0.18);
+  padding: 34px;
+}
+.login-panel h1,
+.admin-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.login-panel p,
+.admin-title p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.login-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+  color: #2D4050;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 14px;
+  padding: 11px 12px;
+  outline: none;
+}
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(143,29,44,0.1);
+}
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2D4050;
+}
+.check-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--red);
+}
+
+.button,
+.icon-button,
+.tab-button,
+.link-button {
+  cursor: pointer;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  border: 1px solid rgba(143,29,44,0.22);
+  border-radius: 5px;
+  background: rgba(143,29,44,0.08);
+  color: var(--ink);
+  padding: 9px 13px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.button:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(143,29,44,0.12);
+}
+.button.primary {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+.button.primary:hover {
+  background: var(--red2);
+  color: #fff;
+}
+.button.blue {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--ink);
+}
+.button.danger {
+  color: #A82735;
+  border-color: rgba(168,39,53,0.24);
+}
+.link-button {
+  width: fit-content;
+  border: 0;
+  background: transparent;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 0;
+}
+.status {
+  min-height: 18px;
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 10px;
+}
+.status.error { color: #B42318; }
+
+.admin-app {
+  display: none;
+  min-height: 100vh;
+}
+.admin-app.active { display: grid; grid-template-rows: auto 1fr; }
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.admin-layout {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(560px, 1fr) minmax(420px, 44vw);
+}
+.editor-pane {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-right: 1px solid var(--line);
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+}
+.tab-button {
+  white-space: nowrap;
+  border: 1px solid rgba(143,29,44,0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: #2D4050;
+  padding: 9px 14px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.tab-button.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.workarea {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(250px, 340px) 1fr;
+  gap: 18px;
+  padding: 18px 22px 24px;
+}
+.list {
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+}
+.list-row {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 10px;
+  text-align: left;
+}
+.list-row:hover,
+.list-row.active { background: rgba(101,188,232,0.14); }
+.list-row.inactive { opacity: 0.56; }
+.thumb {
+  width: 56px;
+  height: 44px;
+  border-radius: 5px;
+  background: var(--blue2);
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  overflow: hidden;
+}
+img.thumb { display: block; }
+.thumb.logo { object-fit: contain; padding: 6px; background: #fff; }
+.row-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+.row-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.25;
+}
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+.icon-button {
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: #2D4050;
+}
+.icon-button:hover { color: var(--red); border-color: rgba(143,29,44,0.28); }
+.item-editor {
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  padding: 18px;
+}
+.item-form {
+  display: grid;
+  gap: 14px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.preview-box {
+  min-height: 180px;
+  border: 1px dashed rgba(143,29,44,0.22);
+  border-radius: 6px;
+  background: var(--soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.preview-box img,
+.preview-box video {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.empty {
+  padding: 22px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+.preview-pane {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #EAF6FE;
+}
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.preview-header h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+@media (max-width: 1120px) {
+  .admin-layout { grid-template-columns: 1fr; }
+  .preview-pane { min-height: 620px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 760px) {
+  .admin-header { flex-direction: column; align-items: stretch; padding: 18px; }
+  .toolbar { justify-content: stretch; }
+  .button { width: 100%; }
+  .workarea { grid-template-columns: 1fr; padding: 16px; }
+  .list { max-height: 310px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-actions { flex-direction: column; }
+  .login-panel { padding: 26px 22px; }
+}
+</style>
+</head>
+<body>
+<main class="login-screen" id="loginScreen">
+  <section class="login-panel">
+    <h1>Admin Login</h1>
+    <p>Manage the portfolio media and publish updated HTML.</p>
+    <form class="login-form" id="loginForm">
+      <label class="field">
+        Email
+        <input type="email" id="loginEmail" autocomplete="username" required>
+      </label>
+      <label class="field">
+        Password
+        <input type="password" id="loginPassword" autocomplete="current-password" required>
+      </label>
+      <button class="button primary" type="submit"><i class="fas fa-right-to-bracket"></i> Login</button>
+    </form>
+    <button class="link-button" id="forgotPassword" type="button">Forgot password?</button>
+    <div class="status" id="loginStatus" role="status"></div>
+  </section>
+</main>
+
+<main class="admin-app" id="adminApp">
+  <header class="admin-header">
+    <div class="admin-title">
+      <h1>Website Admin</h1>
+      <p id="collectionSummary">Social proof screenshots, active state, and order.</p>
+    </div>
+    <div class="toolbar">
+      <button class="button primary" type="button" id="addItem"><i class="fas fa-plus"></i> Add</button>
+      <button class="button blue" type="button" id="exportHtml"><i class="fas fa-download"></i> Export HTML</button>
+      <button class="button" type="button" id="openPublic"><i class="fas fa-arrow-up-right-from-square"></i> Public Site</button>
+      <button class="button danger" type="button" id="resetContent"><i class="fas fa-rotate-left"></i> Reset</button>
+      <button class="button" type="button" id="logout"><i class="fas fa-right-from-bracket"></i> Logout</button>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <section class="editor-pane">
+      <nav class="tabs" id="tabs" aria-label="Content sections">
+        <button class="tab-button active" type="button" data-tab="social">Social Results</button>
+        <button class="tab-button" type="button" data-tab="lead">Lead Results</button>
+        <button class="tab-button" type="button" data-tab="videos">Videos</button>
+        <button class="tab-button" type="button" data-tab="reviews">Reviews</button>
+        <button class="tab-button" type="button" data-tab="logos">Logos</button>
+      </nav>
+
+      <div class="workarea">
+        <div class="list" id="itemList"></div>
+
+        <section class="item-editor">
+          <form class="item-form" id="itemForm">
+            <input type="hidden" id="itemId">
+            <div class="preview-box" id="mediaPreview"></div>
+
+            <label class="field" data-field="src">
+              <span id="srcLabel">Image path</span>
+              <input type="text" id="itemSrc" placeholder="assets/folder/file.jpg">
+            </label>
+
+            <label class="field" data-field="file">
+              Upload file
+              <input type="file" id="itemFile" accept="image/*,video/*">
+            </label>
+
+            <div class="form-grid">
+              <label class="field" data-field="platform">
+                Platform
+                <input type="text" id="itemPlatform">
+              </label>
+              <label class="field" data-field="title">
+                Title
+                <input type="text" id="itemTitle">
+              </label>
+            </div>
+
+            <label class="field" data-field="caption">
+              Caption
+              <input type="text" id="itemCaption">
+            </label>
+
+            <label class="field" data-field="reviewText">
+              Review text
+              <textarea id="itemReviewText"></textarea>
+            </label>
+
+            <div class="form-grid">
+              <label class="field" data-field="author">
+                Author
+                <input type="text" id="itemAuthor">
+              </label>
+              <label class="field" data-field="role">
+                Role
+                <input type="text" id="itemRole">
+              </label>
+            </div>
+
+            <label class="check-row">
+              <input type="checkbox" id="itemActive" checked>
+              Active on website
+            </label>
+
+            <div class="form-actions">
+              <button class="button primary" type="submit"><i class="fas fa-floppy-disk"></i> Save</button>
+              <button class="button" type="button" id="duplicateItem"><i class="fas fa-copy"></i> Duplicate</button>
+              <button class="button danger" type="button" id="deleteItem"><i class="fas fa-trash"></i> Remove</button>
+            </div>
+            <div class="status" id="adminStatus" role="status"></div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <aside class="preview-pane">
+      <div class="preview-header">
+        <h2>Live Preview</h2>
+        <button class="button" type="button" id="refreshPreview"><i class="fas fa-rotate"></i> Refresh</button>
+      </div>
+      <iframe class="preview-frame" id="previewFrame" src="../hussain-punawala-portfolio-publicnews.html" title="Public website preview"></iframe>
+    </aside>
+  </div>
+</main>
+
+<script>
+var ADMIN_EMAIL = 'hussainpunawala1@gmail.com';
+var ADMIN_PASS_HASH = '05d75a41c2fb799040d115884e4b1515b29341aa5ab0a18d5b9d1b98c8099932';
+var ADMIN_PASS_FALLBACK = 'SHVzbjEyMzRAJQ==';
+var CONTENT_KEY = 'hp-admin-content-v2';
+var SESSION_KEY = 'hp-admin-session-v1';
+var PUBLIC_PAGE = '../hussain-punawala-portfolio-publicnews.html';
+
+var COLLECTIONS = {
+  social: { label: 'Social Results', summary: 'Social proof screenshots, active state, and order.', media: 'image', icon: 'fas fa-chart-line', fields: ['src', 'file', 'platform', 'title', 'caption'] },
+  lead: { label: 'Lead Results', summary: 'Lead generation screenshots, active state, and order.', media: 'image', icon: 'fas fa-ad', fields: ['src', 'file', 'platform', 'title', 'caption'] },
+  videos: { label: 'Videos', summary: 'Video proof clips, active state, and order.', media: 'video', icon: 'fas fa-film', fields: ['src', 'file', 'title', 'caption'] },
+  reviews: { label: 'Reviews', summary: 'Client review screenshots, active state, and order.', media: 'image', icon: 'fas fa-star', fields: ['src', 'file', 'reviewText', 'author', 'role'] },
+  logos: { label: 'Logos', summary: 'Client logos, active state, and order.', media: 'logo', icon: 'fas fa-building', fields: ['src', 'file', 'title'] }
+};
+
+var DEFAULT_CONTENT = {
+  social: [
+    { id: 'social-01', active: true, src: '../assets/social-results/social-01.png', platform: 'Facebook', title: 'Views and reach growth in 1 month', caption: 'Al burraq' },
+    { id: 'social-02', active: true, src: '../assets/social-results/social-02.png', platform: 'Linkedin', title: 'Daily reach and impr', caption: 'next solutions' },
+    { id: 'social-03', active: true, src: '../assets/social-results/social-03.png', platform: 'instagram', title: 'Growth on all metrics', caption: 'al ussod' },
+    { id: 'social-04', active: true, src: '../assets/social-results/social-04.png', platform: 'tiktok', title: 'Increase in numbers', caption: 'next events' },
+    { id: 'social-05', active: true, src: '../assets/social-results/social-05.png', platform: 'google analytics', title: 'Huge traffic on web', caption: 'cultsport' },
+    { id: 'social-06', active: true, src: '../assets/social-results/social-06.png', platform: 'Google ads', title: 'More than 1.5B impr', caption: 'Sotc' },
+    { id: 'social-07', active: true, src: '../assets/social-results/social-07.jpg', platform: 'Instagram', title: 'Engagement on one of post', caption: 'next solutions events' },
+    { id: 'social-08', active: true, src: '../assets/social-results/social-08.png', platform: 'facebook', title: 'Engagement', caption: 'caryoka' },
+    { id: 'social-09', active: true, src: '../assets/social-results/social-09.png', platform: 'facebook', title: 'Engagement', caption: 'caryoka' },
+    { id: 'social-10', active: true, src: '../assets/social-results/social-10.jpg', platform: 'facebook', title: 'Engagement', caption: 'bluebell medical' },
+    { id: 'social-11', active: true, src: '../assets/social-results/social-11.png', platform: 'instagram', title: 'Engagement', caption: '3XM realestate' },
+    { id: 'social-12', active: true, src: '../assets/social-results/social-12.jpg', platform: 'instagram', title: 'Engagement', caption: 'prime time business' },
+    { id: 'social-13', active: true, src: '../assets/social-results/social-13.jpg', platform: 'instagram', title: 'Social Media Results', caption: 'phantom ppf' },
+    { id: 'social-14', active: true, src: '../assets/social-results/social-14.jpg', platform: 'instagram', title: 'Social Media Results', caption: 'wallchic' },
+    { id: 'social-15', active: true, src: '../assets/social-results/social-15.jpg', platform: 'meta ads', title: 'Results', caption: 'Alusood' }
+  ],
+  lead: [
+    { id: 'lead-01', active: true, src: '../assets/lead-results/lead-01.png', platform: 'Paid Ads Meta', title: 'iscent', caption: 'CPL drop from 250 to 69' },
+    { id: 'lead-02', active: true, src: '../assets/lead-results/lead-02.png', platform: 'Paid Ads Meta', title: 'Bluebell', caption: 'quality leads in less cpl' },
+    { id: 'lead-03', active: true, src: '../assets/lead-results/lead-03.png', platform: 'Paid Ads Shopify', title: 'wallchic', caption: 'best sales from prv months' },
+    { id: 'lead-04', active: true, src: '../assets/lead-results/lead-04.png', platform: 'Paid Ads google', title: 'wallchic', caption: 'cpl only 10 aed' },
+    { id: 'lead-05', active: true, src: '../assets/lead-results/lead-05.png', platform: 'Paid Ads meta', title: 'caryoka', caption: 'Paid ad campaign result screenshot' }
+  ],
+  videos: [
+    { id: 'video-01', active: true, src: '../assets/videos/video-01.webm', title: 'Meta ads live proof', caption: '' },
+    { id: 'video-02', active: true, src: '../assets/videos/video-02.webm', title: 'Google ads live proof', caption: '' }
+  ],
+  reviews: [
+    { id: 'review-01', active: true, src: '../assets/client-reviews/review-01.jpg', text: '"Client feedback screenshot from completed work."', author: 'Alusood', role: '' },
+    { id: 'review-02', active: true, src: '../assets/client-reviews/review-02.png', text: '"Client feedback screenshot from completed work."', author: 'Bluebell', role: '' },
+    { id: 'review-03', active: true, src: '../assets/client-reviews/review-03.jpg', text: '"Client feedback screenshot from completed work."', author: 'Wallchic', role: '' },
+    { id: 'review-04', active: true, src: '../assets/client-reviews/review-04.png', text: '"Client feedback screenshot from completed work."', author: '3xm realestate', role: '' },
+    { id: 'review-05', active: true, src: '../assets/client-reviews/review-05.png', text: '"Client feedback screenshot from completed work."', author: 'Caryoka autocare', role: '' },
+    { id: 'review-06', active: true, src: '../assets/client-reviews/review-06.jpg', text: '"Client feedback screenshot from completed work."', author: 'Phantom ppf', role: '' },
+    { id: 'review-07', active: true, src: '../assets/client-reviews/review-07.png', text: '"Client feedback screenshot from completed work."', author: 'Walchic', role: '' }
+  ],
+  logos: [
+    { id: 'logo-01', active: true, src: '../assets/client-logos/logo-01.jpg', title: 'Client logo 1' },
+    { id: 'logo-02', active: true, src: '../assets/client-logos/logo-02.jpg', title: 'Client logo 2' },
+    { id: 'logo-03', active: true, src: '../assets/client-logos/logo-03.png', title: 'Client logo 3' },
+    { id: 'logo-04', active: true, src: '../assets/client-logos/logo-04.jpg', title: 'Client logo 4' },
+    { id: 'logo-05', active: true, src: '../assets/client-logos/logo-05.png', title: 'Client logo 5' },
+    { id: 'logo-06', active: true, src: '../assets/client-logos/logo-06.jpg', title: 'Client logo 6' },
+    { id: 'logo-07', active: true, src: '../assets/client-logos/logo-07.png', title: 'Client logo 7' },
+    { id: 'logo-08', active: true, src: '../assets/client-logos/logo-08.jpg', title: 'Client logo 8' },
+    { id: 'logo-09', active: true, src: '../assets/client-logos/logo-09.png', title: 'Client logo 9' },
+    { id: 'logo-10', active: true, src: '../assets/client-logos/logo-10.jpg', title: 'Client logo 10' },
+    { id: 'logo-11', active: true, src: '../assets/client-logos/logo-11.png', title: 'Client logo 11' },
+    { id: 'logo-12', active: true, src: '../assets/client-logos/logo-12.png', title: 'Client logo 12' },
+    { id: 'logo-13', active: true, src: '../assets/client-logos/logo-13.png', title: 'Client logo 13' },
+    { id: 'logo-14', active: true, src: '../assets/client-logos/logo-14.png', title: 'Client logo 14' },
+    { id: 'logo-15', active: true, src: '../assets/client-logos/logo-15.png', title: 'Client logo 15' },
+    { id: 'logo-16', active: true, src: '../assets/client-logos/logo-16.png', title: 'Client logo 16' },
+    { id: 'logo-17', active: true, src: '../assets/client-logos/logo-17.png', title: 'Client logo 17' },
+    { id: 'logo-18', active: true, src: '../assets/client-logos/logo-18.png', title: 'Client logo 18' },
+    { id: 'logo-19', active: true, src: '../assets/client-logos/logo-19.png', title: 'Client logo 19' },
+    { id: 'logo-20', active: true, src: '../assets/client-logos/logo-20.png', title: 'Client logo 20' },
+    { id: 'logo-21', active: true, src: '../assets/client-logos/logo-21.png', title: 'Client logo 21' }
+  ]
+};
+
+var content = null;
+var current = 'social';
+var selectedId = null;
+
+function byId(id) { return document.getElementById(id); }
+function qsa(selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); }
+function clone(value) { return JSON.parse(JSON.stringify(value)); }
+function escapeHtml(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function cleanPath(path) {
+  if (!path) return '';
+  if (path.indexOf('data:') === 0 || path.indexOf('http') === 0) return path;
+  return path.replace(/^\.\.\//, '');
+}
+function adminPath(path) {
+  if (!path) return '';
+  if (path.indexOf('data:') === 0 || path.indexOf('http') === 0) return path;
+  return path.indexOf('../') === 0 ? path : '../' + path;
+}
+function publicPath(path) {
+  if (!path) return '';
+  if (path.indexOf('data:') === 0 || path.indexOf('http') === 0) return path;
+  return path.replace(/^\.\.\//, '');
+}
+function storageGet(key) {
+  try { return localStorage.getItem(key); }
+  catch (e) { return null; }
+}
+function storageSet(key, value) {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+function storageRemove(key) {
+  try { localStorage.removeItem(key); }
+  catch (e) {}
+}
+function setStatus(id, text, error) {
+  var el = byId(id);
+  if (!el) return;
+  el.textContent = text || '';
+  el.classList.toggle('error', !!error);
+}
+function makeId(prefix) {
+  return prefix + '-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
+}
+function bufferToHex(buffer) {
+  var bytes = new Uint8Array(buffer);
+  var hex = [];
+  bytes.forEach(function(byte) { hex.push(byte.toString(16).padStart(2, '0')); });
+  return hex.join('');
+}
+function sha256(text) {
+  if (!window.crypto || !window.crypto.subtle || !window.TextEncoder) return Promise.resolve(null);
+  return window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(bufferToHex);
+}
+function verifyPassword(password) {
+  return sha256(password).then(function(hash) {
+    if (hash) return hash === ADMIN_PASS_HASH;
+    try { return password === atob(ADMIN_PASS_FALLBACK); }
+    catch (e) { return false; }
+  });
+}
+function normalizeItem(key, item, index) {
+  var config = COLLECTIONS[key];
+  item.id = item.id || makeId(key);
+  item.active = item.active !== false;
+  item.src = item.src || '';
+  item.platform = item.platform || '';
+  item.title = item.title || '';
+  item.caption = item.caption || '';
+  item.text = item.text || '';
+  item.author = item.author || '';
+  item.role = item.role || '';
+  item.alt = item.alt || item.title || item.author || config.label + ' ' + (index + 1);
+  item.icon = item.icon || config.icon;
+  return item;
+}
+function normalizeContent(data) {
+  var out = data || {};
+  Object.keys(COLLECTIONS).forEach(function(key) {
+    if (!Array.isArray(out[key])) out[key] = [];
+    out[key] = out[key].map(function(item, index) { return normalizeItem(key, item || {}, index); });
+  });
+  return out;
+}
+function loadContent() {
+  var stored = storageGet(CONTENT_KEY);
+  if (stored) {
+    try { return normalizeContent(JSON.parse(stored)); }
+    catch (e) {}
+  }
+  return normalizeContent(clone(DEFAULT_CONTENT));
+}
+function persistContent() {
+  var publicReady = clone(content);
+  Object.keys(publicReady).forEach(function(key) {
+    publicReady[key].forEach(function(item) {
+      item.src = publicPath(item.src);
+    });
+  });
+  if (!storageSet(CONTENT_KEY, JSON.stringify(publicReady))) {
+    setStatus('adminStatus', 'Could not save. Use asset paths or smaller uploads.', true);
+    return false;
+  }
+  content = normalizeContent(publicReady);
+  return true;
+}
+function reloadPreview() {
+  var frame = byId('previewFrame');
+  if (frame) frame.contentWindow.location.reload();
+}
+function currentItems() { return content[current] || []; }
+function currentConfig() { return COLLECTIONS[current]; }
+function findItem(id) {
+  var items = currentItems();
+  for (var i = 0; i < items.length; i += 1) {
+    if (items[i].id === id) return items[i];
+  }
+  return null;
+}
+function itemLabel(item) {
+  if (!item) return '';
+  if (current === 'reviews') return item.author || item.text || 'Review';
+  if (current === 'logos') return item.title || item.alt || 'Client logo';
+  return item.title || item.platform || 'Untitled item';
+}
+function itemMeta(item) {
+  if (!item) return '';
+  if (current === 'reviews') return item.role || item.src || 'Review screenshot';
+  if (current === 'logos') return item.src || 'Logo image';
+  if (current === 'videos') return item.caption || item.src || 'Video';
+  return item.platform || item.caption || item.src || 'Result';
+}
+function thumbHtml(item) {
+  var config = currentConfig();
+  if (config.media === 'video') return '<div class="thumb"><i class="fas fa-film"></i></div>';
+  if (item.src) return '<img class="thumb' + (config.media === 'logo' ? ' logo' : '') + '" src="' + escapeHtml(adminPath(item.src)) + '" alt="">';
+  return '<div class="thumb"><i class="' + escapeHtml(config.icon) + '"></i></div>';
+}
+function renderList() {
+  var list = byId('itemList');
+  var items = currentItems();
+  if (!items.length) {
+    list.innerHTML = '<div class="empty">No items yet.</div>';
+    return;
+  }
+  list.innerHTML = items.map(function(item) {
+    return '' +
+      '<div class="list-row' + (item.id === selectedId ? ' active' : '') + (item.active === false ? ' inactive' : '') + '" data-id="' + escapeHtml(item.id) + '">' +
+        thumbHtml(item) +
+        '<div><span class="row-title">' + escapeHtml(itemLabel(item)) + '</span><span class="row-meta">' + escapeHtml(itemMeta(item)) + '</span></div>' +
+        '<div class="row-actions">' +
+          '<button class="icon-button" type="button" data-action="up" aria-label="Move up"><i class="fas fa-arrow-up"></i></button>' +
+          '<button class="icon-button" type="button" data-action="down" aria-label="Move down"><i class="fas fa-arrow-down"></i></button>' +
+          '<button class="icon-button" type="button" data-action="toggle" aria-label="Toggle active"><i class="fas ' + (item.active === false ? 'fa-eye-slash' : 'fa-eye') + '"></i></button>' +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+function setFieldVisibility() {
+  var config = currentConfig();
+  qsa('[data-field]').forEach(function(field) {
+    var name = field.getAttribute('data-field');
+    field.style.display = config.fields.indexOf(name) >= 0 ? '' : 'none';
+  });
+  byId('srcLabel').textContent = config.media === 'video' ? 'Video path' : (config.media === 'logo' ? 'Logo image path' : 'Image path');
+  byId('itemFile').setAttribute('accept', config.media === 'video' ? 'video/*' : 'image/*');
+}
+function updatePreview() {
+  var preview = byId('mediaPreview');
+  var src = byId('itemSrc').value.trim();
+  if (!src) {
+    preview.innerHTML = '<span class="empty">No media selected.</span>';
+    return;
+  }
+  if (currentConfig().media === 'video') {
+    preview.innerHTML = '<video src="' + escapeHtml(adminPath(src)) + '" controls preload="metadata"></video>';
+  } else {
+    preview.innerHTML = '<img src="' + escapeHtml(adminPath(src)) + '" alt="">';
+  }
+}
+function fillForm(item) {
+  setFieldVisibility();
+  byId('itemId').value = item ? item.id : '';
+  byId('itemSrc').value = item ? cleanPath(item.src) : '';
+  byId('itemPlatform').value = item ? item.platform || '' : '';
+  byId('itemTitle').value = item ? item.title || item.alt || '' : '';
+  byId('itemCaption').value = item ? item.caption || '' : '';
+  byId('itemReviewText').value = item ? item.text || '' : '';
+  byId('itemAuthor').value = item ? item.author || '' : '';
+  byId('itemRole').value = item ? item.role || '' : '';
+  byId('itemActive').checked = item ? item.active !== false : true;
+  updatePreview();
+}
+function selectItem(id) {
+  var item = findItem(id);
+  selectedId = item ? item.id : null;
+  fillForm(item);
+  renderList();
+  setStatus('adminStatus', '', false);
+}
+function selectFirst() {
+  var items = currentItems();
+  selectItem(items.length ? items[0].id : null);
+}
+function renderTabs() {
+  qsa('[data-tab]').forEach(function(tab) {
+    tab.classList.toggle('active', tab.getAttribute('data-tab') === current);
+  });
+}
+function renderPanel() {
+  byId('collectionSummary').textContent = currentConfig().summary;
+  renderTabs();
+  renderList();
+  if (!findItem(selectedId)) selectFirst();
+  else fillForm(findItem(selectedId));
+}
+function newItem() {
+  var item = normalizeItem(current, { id: makeId(current), active: true, src: '', icon: currentConfig().icon }, currentItems().length);
+  if (current === 'social') { item.platform = 'Social Media'; item.title = 'New social result'; }
+  if (current === 'lead') { item.platform = 'Paid Ads'; item.title = 'New lead result'; }
+  if (current === 'videos') item.title = 'New video proof';
+  if (current === 'reviews') { item.text = '"Client feedback screenshot from completed work."'; item.author = 'Client name'; }
+  if (current === 'logos') { item.title = 'Client logo'; item.alt = 'Client logo'; }
+  return item;
+}
+function addItem() {
+  var item = newItem();
+  currentItems().push(item);
+  persistContent();
+  selectItem(item.id);
+  reloadPreview();
+  setStatus('adminStatus', 'Item added.', false);
+}
+function saveItem(event) {
+  if (event) event.preventDefault();
+  var id = byId('itemId').value;
+  var item = findItem(id);
+  if (!item) {
+    item = newItem();
+    currentItems().push(item);
+    selectedId = item.id;
+  }
+  item.src = cleanPath(byId('itemSrc').value.trim());
+  item.active = byId('itemActive').checked;
+  item.platform = byId('itemPlatform').value.trim();
+  item.title = byId('itemTitle').value.trim();
+  item.caption = byId('itemCaption').value.trim();
+  item.text = byId('itemReviewText').value.trim();
+  item.author = byId('itemAuthor').value.trim();
+  item.role = byId('itemRole').value.trim();
+  item.alt = item.title || item.author || currentConfig().label;
+  item.icon = item.icon || currentConfig().icon;
+  if (persistContent()) {
+    renderPanel();
+    reloadPreview();
+    setStatus('adminStatus', 'Saved.', false);
+  }
+}
+function duplicateItem() {
+  var item = findItem(selectedId);
+  if (!item) return;
+  var items = currentItems();
+  var index = items.indexOf(item);
+  var copy = clone(item);
+  copy.id = makeId(current);
+  copy.title = copy.title ? copy.title + ' copy' : copy.title;
+  items.splice(index + 1, 0, copy);
+  persistContent();
+  selectItem(copy.id);
+  reloadPreview();
+  setStatus('adminStatus', 'Duplicated.', false);
+}
+function deleteItem() {
+  var item = findItem(selectedId);
+  if (!item) return;
+  if (!window.confirm('Remove this item?')) return;
+  var items = currentItems();
+  items.splice(items.indexOf(item), 1);
+  persistContent();
+  selectedId = null;
+  renderPanel();
+  reloadPreview();
+  setStatus('adminStatus', 'Removed.', false);
+}
+function moveItem(id, direction) {
+  var items = currentItems();
+  var item = findItem(id);
+  var index = items.indexOf(item);
+  var next = direction === 'up' ? index - 1 : index + 1;
+  if (!item || next < 0 || next >= items.length) return;
+  items[index] = items[next];
+  items[next] = item;
+  persistContent();
+  selectItem(item.id);
+  reloadPreview();
+}
+function toggleItem(id) {
+  var item = findItem(id);
+  if (!item) return;
+  item.active = item.active === false;
+  persistContent();
+  selectItem(item.id);
+  reloadPreview();
+}
+function handleListClick(event) {
+  var row = event.target.closest('[data-id]');
+  if (!row) return;
+  var action = event.target.closest('[data-action]');
+  var id = row.getAttribute('data-id');
+  if (action) {
+    event.preventDefault();
+    event.stopPropagation();
+    var name = action.getAttribute('data-action');
+    if (name === 'up' || name === 'down') moveItem(id, name);
+    if (name === 'toggle') toggleItem(id);
+    return;
+  }
+  selectItem(id);
+}
+function handleFile(event) {
+  var file = event.target.files && event.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function() {
+    byId('itemSrc').value = reader.result;
+    updatePreview();
+    setStatus('adminStatus', 'File loaded. Save to apply.', false);
+  };
+  reader.onerror = function() { setStatus('adminStatus', 'File could not be loaded.', true); };
+  reader.readAsDataURL(file);
+}
+function requestReset() {
+  var email = (byId('loginEmail').value || '').trim().toLowerCase();
+  if (email && email !== ADMIN_EMAIL) {
+    setStatus('loginStatus', 'Reset link can only go to ' + ADMIN_EMAIL + '.', true);
+    return;
+  }
+  var subject = 'Password reset link for website admin';
+  var body = 'Please send the admin password reset link to ' + ADMIN_EMAIL + ' only.';
+  window.location.href = 'mailto:' + ADMIN_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  setStatus('loginStatus', 'Reset request opened for ' + ADMIN_EMAIL + '.', false);
+}
+function showAdmin() {
+  byId('loginScreen').style.display = 'none';
+  byId('adminApp').classList.add('active');
+  storageSet(SESSION_KEY, '1');
+  renderPanel();
+}
+function showLogin() {
+  byId('loginScreen').style.display = 'grid';
+  byId('adminApp').classList.remove('active');
+  storageRemove(SESSION_KEY);
+}
+function handleLogin(event) {
+  event.preventDefault();
+  var email = (byId('loginEmail').value || '').trim().toLowerCase();
+  var password = byId('loginPassword').value || '';
+  setStatus('loginStatus', 'Checking login...', false);
+  if (email !== ADMIN_EMAIL) {
+    setStatus('loginStatus', 'Use ' + ADMIN_EMAIL + ' to login.', true);
+    return;
+  }
+  verifyPassword(password).then(function(valid) {
+    if (!valid) {
+      setStatus('loginStatus', 'Incorrect password.', true);
+      return;
+    }
+    byId('loginPassword').value = '';
+    setStatus('loginStatus', '', false);
+    showAdmin();
+  });
+}
+function safeJson(value) {
+  return JSON.stringify(value).replace(/</g, '\\u003c');
+}
+function exportHtml() {
+  var publicReady = clone(content);
+  Object.keys(publicReady).forEach(function(key) {
+    publicReady[key].forEach(function(item) { item.src = publicPath(item.src); });
+  });
+  fetch(PUBLIC_PAGE, { cache: 'no-store' }).then(function(response) {
+    if (!response.ok) throw new Error('Public page could not be loaded.');
+    return response.text();
+  }).then(function(html) {
+    var replacement = '<script type="application/json" id="adminContentSeed">' + safeJson(publicReady) + '<\/script>';
+    if (html.indexOf('id="adminContentSeed"') >= 0) {
+      html = html.replace(/<script type="application\/json" id="adminContentSeed">[\s\S]*?<\/script>/, replacement);
+    } else {
+      html = html.replace('<script>', replacement + '\n<script>');
+    }
+    var blob = new Blob([html], { type: 'text/html' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'hussain-punawala-portfolio-publicnews.html';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(function() { URL.revokeObjectURL(link.href); }, 500);
+    setStatus('adminStatus', 'Updated public HTML exported.', false);
+  })['catch'](function() {
+    setStatus('adminStatus', 'Export needs the admin page opened through a web server. Local edits are still saved in this browser.', true);
+  });
+}
+function resetContent() {
+  if (!window.confirm('Reset all admin edits?')) return;
+  storageRemove(CONTENT_KEY);
+  content = normalizeContent(clone(DEFAULT_CONTENT));
+  selectedId = null;
+  renderPanel();
+  reloadPreview();
+  setStatus('adminStatus', 'Content reset.', false);
+}
+function init() {
+  content = loadContent();
+  byId('loginEmail').value = ADMIN_EMAIL;
+
+  byId('loginForm').addEventListener('submit', handleLogin);
+  byId('forgotPassword').addEventListener('click', requestReset);
+  byId('logout').addEventListener('click', showLogin);
+  byId('addItem').addEventListener('click', addItem);
+  byId('itemForm').addEventListener('submit', saveItem);
+  byId('duplicateItem').addEventListener('click', duplicateItem);
+  byId('deleteItem').addEventListener('click', deleteItem);
+  byId('itemList').addEventListener('click', handleListClick);
+  byId('itemSrc').addEventListener('input', updatePreview);
+  byId('itemFile').addEventListener('change', handleFile);
+  byId('exportHtml').addEventListener('click', exportHtml);
+  byId('resetContent').addEventListener('click', resetContent);
+  byId('refreshPreview').addEventListener('click', reloadPreview);
+  byId('openPublic').addEventListener('click', function() { window.open(PUBLIC_PAGE, '_blank'); });
+  qsa('[data-tab]').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      current = tab.getAttribute('data-tab');
+      selectedId = null;
+      renderPanel();
+    });
+  });
+  if (storageGet(SESSION_KEY) === '1') showAdmin();
+}
+init();
+</script>
+</body>
+</html>
