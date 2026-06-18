@@ -1,0 +1,3232 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1H3H1D5W30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1H3H1D5W30');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="7FRxCMY1zrjKMzmAR2rrItJmlXfPk8ubl7io_UWF6WM">
+<title>Hussain Punawala | Digital Marketing Expert</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --dark: #0A0A0A;
+  --dark2: #111111;
+  --dark3: #1A1A1A;
+  --dark4: #222222;
+  --white: #F5F0E8;
+  --grey: #888888;
+  --grey-light: #AAAAAA;
+  --accent: #C9A84C;
+}
+
+body.light-mode {
+  --gold: #8F1D2C;
+  --gold-light: #C53B4A;
+  --dark: #F8FCFF;
+  --dark2: #EEF7FF;
+  --dark3: #FFFFFF;
+  --dark4: #D9ECFA;
+  --white: #101923;
+  --grey: #6B7B88;
+  --grey-light: #2D4050;
+  --accent: #65BCE8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--dark);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  cursor: default;
+  transition: background-color 0.28s ease, color 0.28s ease;
+}
+
+body.light-mode::before { opacity: 0.08; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  transition: padding 0.3s ease, background-color 0.28s ease, border-color 0.28s ease;
+}
+body.light-mode nav {
+  background: rgba(248,252,255,0.92);
+  border-bottom-color: rgba(143,29,44,0.22);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  color: var(--grey-light);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--dark) !important;
+  padding: 10px 22px;
+  border-radius: 2px;
+  font-weight: 600 !important;
+  transition: background 0.2s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+body.light-mode .nav-cta,
+body.light-mode .btn-primary,
+body.light-mode .form-submit,
+body.light-mode .about-experience-badge,
+body.light-mode .play-btn i { color: #101010 !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: var(--gold); transition: 0.3s; display: block; }
+.mobile-menu {
+  display: none;
+  position: fixed; top: 70px; left: 0; right: 0;
+  background: var(--dark2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding: 20px 30px;
+  z-index: 999;
+}
+.mobile-menu a {
+  display: block; color: var(--white); text-decoration: none;
+  padding: 12px 0; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu.open { display: block; }
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 120px 60px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 80% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+}
+
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 700px; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 30px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+h1.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 8vw, 90px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+h1.hero-name span { color: var(--gold); }
+
+.hero-title {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--grey-light);
+  font-weight: 400;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-title strong { color: var(--gold); font-weight: 600; }
+
+.hero-stats {
+  display: flex; gap: 40px; margin-bottom: 40px;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.stat-item { display: flex; flex-direction: column; }
+.stat-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label { font-size: 12px; color: var(--grey); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+.hero-btns {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  border: none;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.3); }
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+.hero-socials {
+  position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 20px; align-items: center;
+  z-index: 2;
+}
+.hero-socials::before, .hero-socials::after {
+  content: '';
+  display: block; width: 1px; height: 60px;
+  background: rgba(201,168,76,0.3);
+}
+.hero-socials a {
+  color: var(--grey);
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+.hero-socials a:hover { color: var(--gold); transform: scale(1.2); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTIONS */
+section { padding: 100px 60px; }
+
+.section-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.section-title span { color: var(--gold); }
+
+.section-line {
+  width: 60px; height: 3px;
+  background: var(--gold);
+  margin-bottom: 50px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--grey-light);
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+/* ABOUT */
+#about { background: var(--dark2); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-img-wrap { position: relative; }
+
+.about-img-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--dark3);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.about-img-frame::before {
+  content: '';
+  position: absolute;
+  top: 20px; left: 20px;
+  right: -10px; bottom: -10px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 4px;
+  z-index: -1;
+}
+.about-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.3;
+}
+.about-img-frame img,
+.about-img-frame video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 20px 24px;
+  border-radius: 4px;
+}
+.about-experience-badge .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+}
+.about-experience-badge .label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  color: var(--grey-light);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.skill-tag {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 2px;
+  font-size: 13px;
+  color: var(--grey-light);
+  background: rgba(201,168,76,0.04);
+  transition: border-color 0.2s, color 0.2s;
+}
+.skill-tag:hover { border-color: var(--gold); color: var(--gold); }
+.skill-tag i { color: var(--gold); font-size: 14px; }
+
+/* RESULT CARDS */
+#social-results { background: var(--dark); }
+.results-header { max-width: 1200px; margin: 0 auto 50px; }
+
+.screenshots-grid,
+.lead-grid,
+.video-grid,
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#lead-gen,
+#clients { background: var(--dark2); }
+#video-proof,
+#testimonials { background: var(--dark); }
+
+.screenshot-card,
+.video-card,
+.testimonial-card {
+  background: var(--dark3);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.screenshot-card:hover,
+.video-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.screenshot-placeholder,
+.video-thumb,
+.testimonial-screenshot {
+  height: 220px;
+  background: var(--dark4);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.video-thumb { height: 200px; }
+.testimonial-screenshot { height: 240px; }
+
+.screenshot-placeholder::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.03) 0%, transparent 60%);
+}
+.screenshot-placeholder i,
+.testimonial-screenshot i { font-size: 36px; color: rgba(201,168,76,0.3); }
+.screenshot-placeholder span { font-size: 12px; color: var(--grey); letter-spacing: 1px; text-transform: uppercase; }
+
+.screenshot-card img,
+.testimonial-screenshot img,
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.screenshot-placeholder img {
+  object-fit: contain;
+  padding: 10px;
+  background: var(--dark4);
+}
+.testimonial-screenshot img {
+  object-fit: contain;
+  padding: 10px;
+  background: var(--dark4);
+}
+.video-thumb video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.screenshot-info,
+.video-info,
+.testimonial-content { padding: 16px 20px; }
+.screenshot-info h4,
+.video-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.screenshot-info p,
+.video-info p { font-size: 12px; color: var(--grey); }
+
+.platform-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.play-btn {
+  position: absolute;
+  width: 56px; height: 56px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.play-btn:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(201,168,76,0.5); }
+.play-btn i { color: var(--dark); font-size: 18px; margin-left: 3px; }
+
+/* CLIENTS */
+#clients {
+  background: #f0c96a;
+  color: #101010;
+  overflow: hidden;
+  padding: 96px 0 118px;
+  position: relative;
+}
+.clients-header {
+  max-width: 940px;
+  margin: 0 auto 50px;
+  padding: 0 24px;
+  text-align: center;
+}
+#clients .section-tag {
+  color: #101010;
+  opacity: 0.7;
+}
+#clients .section-title {
+  color: #101010;
+  font-size: clamp(34px, 4.8vw, 58px);
+  margin-bottom: 0;
+}
+#clients .section-title span { color: #101010; }
+#clients .section-line,
+#clients .section-subtitle { display: none; }
+
+.logo-marquee-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin: 24px -32px 0;
+  padding: 18px 0;
+}
+.logo-marquee-row {
+  width: calc(100% + 96px);
+  margin-left: -48px;
+  overflow: hidden;
+  border-top: 4px solid #101010;
+  border-bottom: 4px solid #101010;
+  background: #fbfaf4;
+  box-shadow: 0 14px 36px rgba(10,10,10,0.14);
+}
+.logo-marquee-row:first-child { transform: translateY(20px) rotate(7deg) scale(1.08); }
+.logo-marquee-row:last-child { transform: translateY(-20px) rotate(-7deg) scale(1.08); }
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: logoMarquee 34s linear infinite;
+}
+.logo-marquee-track.reverse {
+  animation: logoMarqueeReverse 36s linear infinite;
+}
+.logo-marquee-row:hover .logo-marquee-track { animation-play-state: paused; }
+.logo-marquee-set {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.logo-marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  height: 96px;
+  padding: 18px 30px;
+  border-right: 1px solid rgba(10,10,10,0.16);
+  color: #101010;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.logo-marquee-item:hover {
+  background: #eee8dc;
+  transform: translateY(-2px);
+}
+.logo-marquee-item img {
+  width: 130px;
+  height: 58px;
+  object-fit: contain;
+  filter: contrast(1.04) saturate(1.02);
+}
+#clients .industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 64px auto 0;
+  padding: 0 24px;
+}
+#clients .industry-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border: 1px solid rgba(10,10,10,0.28);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.24);
+  color: #101010;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes logoMarqueeReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* TESTIMONIALS */
+.testimonial-stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+.testimonial-text { font-size: 14px; color: var(--grey-light); line-height: 1.7; margin-bottom: 14px; font-style: italic; }
+.testimonial-author { font-size: 13px; font-weight: 600; color: var(--white); }
+.testimonial-role { font-size: 11px; color: var(--grey); letter-spacing: 1px; text-transform: uppercase; }
+
+/* CONTACT */
+#contact { background: var(--dark2); }
+.contact-wrapper {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 80px; align-items: start;
+}
+.contact-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.contact-info p { color: var(--grey-light); font-size: 15px; line-height: 1.8; margin-bottom: 36px; }
+.contact-items { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; align-items: flex-start; gap: 16px; }
+.contact-icon {
+  width: 44px; height: 44px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.contact-detail label { font-size: 11px; color: var(--grey); letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.contact-detail a, .contact-detail span { font-size: 14px; color: var(--white); text-decoration: none; transition: color 0.2s; }
+.contact-detail a:hover { color: var(--gold); }
+
+.contact-links { display: flex; gap: 12px; margin-top: 30px; }
+.social-link {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--grey-light);
+  text-decoration: none;
+  font-size: 15px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.social-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+.form-group label span { color: var(--gold); }
+.form-control {
+  background: var(--dark3);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+.form-control:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.08); }
+.form-control::placeholder { color: var(--grey); }
+select.form-control option { background: var(--dark3); color: var(--white); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+textarea.form-control { resize: vertical; min-height: 110px; }
+.checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.checkbox-label {
+  display: flex; align-items: center; gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--grey-light);
+  padding: 8px 14px;
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 4px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.checkbox-label:hover { border-color: var(--gold); color: var(--gold); }
+.checkbox-label input { display: none; }
+.checkbox-label.checked { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+.other-input { display: none; margin-top: 8px; }
+.other-input.show { display: block; }
+.form-submit {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 16px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 6px;
+  width: 100%;
+  justify-content: center;
+}
+.form-submit:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.3); }
+.whatsapp-note {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--grey);
+  margin-top: 4px;
+}
+.whatsapp-note i { color: #25D366; }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(201,168,76,0.12);
+  padding: 50px 60px 30px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 24px;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--gold);
+}
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer-links a { color: var(--grey); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 13px; color: var(--grey); }
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9000;
+  align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90vw; max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.lightbox-close {
+  position: absolute; top: 24px; right: 30px;
+  font-size: 30px; color: var(--white);
+  cursor: pointer; transition: color 0.2s;
+}
+.lightbox-close:hover { color: var(--gold); }
+
+/* THEME TOGGLE */
+.theme-toggle {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 10030;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201,168,76,0.34);
+  border-radius: 50%;
+  background: rgba(26,26,26,0.9);
+  color: var(--gold);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.34);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.theme-toggle:hover {
+  transform: translateY(-3px);
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+  box-shadow: 0 18px 44px rgba(201,168,76,0.26);
+}
+.theme-toggle i { font-size: 16px; }
+body.light-mode .theme-toggle {
+  background: rgba(255,255,255,0.88);
+  color: #8F1D2C;
+  border-color: rgba(143,29,44,0.28);
+  box-shadow: 0 14px 34px rgba(42,86,112,0.16);
+}
+body.light-mode .theme-toggle:hover {
+  background: #8F1D2C;
+  color: #FFFFFF;
+  box-shadow: 0 18px 44px rgba(143,29,44,0.24);
+}
+body.light-mode .hero-bg {
+  background: radial-gradient(ellipse 75% 58% at 72% 48%, rgba(101,188,232,0.22) 0%, transparent 68%),
+              radial-gradient(ellipse 46% 72% at 10% 78%, rgba(143,29,44,0.12) 0%, transparent 60%);
+}
+body.light-mode .hero-grid {
+  background-image: linear-gradient(rgba(101,188,232,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(143,29,44,0.08) 1px, transparent 1px);
+}
+body.light-mode #clients {
+  background: #BFEAFF;
+  color: #101923;
+}
+body.light-mode #clients .section-tag,
+body.light-mode #clients .section-title,
+body.light-mode #clients .section-title span,
+body.light-mode #clients .industry-tag { color: #101923; }
+body.light-mode .logo-marquee-row {
+  background: #FFFFFF;
+  border-color: #101923;
+  box-shadow: 0 14px 36px rgba(42,86,112,0.16);
+}
+body.light-mode .logo-marquee-item:hover { background: #E9F6FF; }
+
+/* ADMIN PANEL */
+.admin-shell {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 11000;
+}
+.admin-shell.open { display: block; }
+.admin-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.68);
+  backdrop-filter: blur(8px);
+}
+.admin-modal {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  bottom: 22px;
+  width: min(980px, calc(100vw - 44px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(17,17,17,0.98);
+  color: var(--white);
+  border: 1px solid rgba(201,168,76,0.28);
+  border-radius: 8px;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.62);
+}
+.admin-shell:not(.is-authenticated) .admin-modal {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  width: min(430px, calc(100vw - 32px));
+  transform: translate(-50%, -50%);
+}
+body.light-mode .admin-modal {
+  background: rgba(255,255,255,0.98);
+  border-color: rgba(143,29,44,0.22);
+  box-shadow: 0 28px 90px rgba(42,86,112,0.18);
+}
+.admin-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--grey-light);
+  cursor: pointer;
+}
+.admin-close:hover { color: var(--gold); border-color: rgba(201,168,76,0.4); }
+.admin-login {
+  padding: 34px;
+}
+.admin-login h2,
+.admin-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.admin-login p,
+.admin-title p {
+  color: var(--grey-light);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.admin-login form {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+.admin-field {
+  display: grid;
+  gap: 7px;
+  color: var(--grey-light);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.admin-field input,
+.admin-field textarea,
+.admin-field select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 4px;
+  background: var(--dark3);
+  color: var(--white);
+  font: 14px 'DM Sans', sans-serif;
+  padding: 11px 12px;
+  outline: none;
+}
+.admin-field textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+.admin-field input:focus,
+.admin-field textarea:focus {
+  border-color: var(--gold);
+}
+.admin-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--grey-light);
+  font-size: 13px;
+  font-weight: 700;
+}
+.admin-check input { width: 18px; height: 18px; accent-color: var(--gold); }
+.admin-button,
+.admin-icon-button {
+  border: 1px solid rgba(201,168,76,0.28);
+  border-radius: 4px;
+  background: rgba(201,168,76,0.1);
+  color: var(--white);
+  min-height: 40px;
+  padding: 9px 12px;
+  font: 800 12px 'DM Sans', sans-serif;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
+}
+.admin-button:hover,
+.admin-icon-button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.15);
+}
+.admin-button.primary {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+.admin-button.primary:hover {
+  background: var(--gold-light);
+  color: var(--dark);
+}
+.admin-button.danger,
+.admin-icon-button.danger {
+  color: #FFB4A8;
+  border-color: rgba(255,120,92,0.34);
+}
+.admin-login-actions,
+.admin-toolbar,
+.admin-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.admin-login-actions { margin-top: 12px; justify-content: space-between; }
+.admin-link-button {
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  font: 700 12px 'DM Sans', sans-serif;
+  cursor: pointer;
+  padding: 8px 0;
+}
+.admin-status {
+  min-height: 18px;
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 10px;
+}
+.admin-status.is-error { color: #FF8A76; }
+.admin-dashboard {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+}
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid rgba(201,168,76,0.16);
+}
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.admin-tab {
+  white-space: nowrap;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--grey-light);
+  padding: 9px 14px;
+  font: 800 11px 'DM Sans', sans-serif;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.admin-tab.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+}
+.admin-main {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 18px;
+  min-height: 0;
+  padding: 18px 28px 28px;
+}
+.admin-list {
+  overflow: auto;
+  min-height: 0;
+  border: 1px solid rgba(201,168,76,0.16);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+}
+.admin-list-row {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+  background: transparent;
+  color: var(--white);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.admin-list-row:hover,
+.admin-list-row.active {
+  background: rgba(201,168,76,0.1);
+}
+.admin-list-row.inactive {
+  opacity: 0.58;
+}
+.admin-thumb {
+  width: 54px;
+  height: 44px;
+  border-radius: 4px;
+  background: var(--dark4);
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+img.admin-thumb { display: block; }
+.admin-thumb.logo { object-fit: contain; padding: 6px; background: #fff; }
+.admin-row-title {
+  display: block;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+.admin-row-meta {
+  display: block;
+  color: var(--grey);
+  font-size: 11px;
+  line-height: 1.25;
+}
+.admin-row-actions {
+  display: flex;
+  gap: 6px;
+}
+.admin-icon-button {
+  width: 32px;
+  min-height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-editor {
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid rgba(201,168,76,0.16);
+  border-radius: 6px;
+  padding: 18px;
+  background: rgba(255,255,255,0.02);
+}
+.admin-form {
+  display: grid;
+  gap: 14px;
+}
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.admin-preview {
+  width: 100%;
+  min-height: 180px;
+  border: 1px dashed rgba(201,168,76,0.24);
+  border-radius: 6px;
+  background: var(--dark4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.admin-preview img,
+.admin-preview video {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+.admin-empty {
+  padding: 22px;
+  color: var(--grey);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* SCROLL ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.screenshot-card.fade-in,
+.video-card.fade-in,
+.testimonial-card.fade-in {
+  transform: translateY(36px) scale(0.96);
+}
+.screenshot-card.fade-in.visible,
+.video-card.fade-in.visible,
+.testimonial-card.fade-in.visible {
+  transform: translateY(0) scale(1);
+}
+.skill-tag,
+.contact-item,
+.industry-tag {
+  transition: transform 0.22s ease, border-color 0.22s ease, color 0.22s ease, background 0.22s ease;
+}
+.skill-tag:hover,
+.contact-item:hover,
+.industry-tag:hover {
+  transform: translateY(-2px);
+}
+
+body.light-mode .screenshot-card,
+body.light-mode .video-card,
+body.light-mode .testimonial-card,
+body.light-mode .client-logo-card,
+body.light-mode .form-control {
+  box-shadow: 0 12px 28px rgba(42,86,112,0.1);
+}
+body.light-mode .btn-secondary {
+  color: var(--white);
+  border-color: rgba(45,64,80,0.24);
+}
+body.light-mode .marquee-item { color: #101923; }
+body.light-mode .logo-marquee-row {
+  box-shadow: 0 14px 36px rgba(42,86,112,0.16);
+}
+
+.marquee-section {
+  background: var(--gold);
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 60px;
+  animation: marquee 25s linear infinite;
+}
+.marquee-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+.marquee-item i { margin-right: 10px; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  #hero { padding: 100px 24px 60px; }
+  .hero-socials { display: none; }
+  section { padding: 70px 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-img-wrap { max-width: 340px; margin: 0 auto; }
+  .contact-wrapper { grid-template-columns: 1fr; gap: 50px; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { padding: 40px 24px 24px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .admin-modal {
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+  }
+  .admin-header {
+    flex-direction: column;
+    padding: 22px 18px 16px;
+  }
+  .admin-tabs { padding: 12px 18px; }
+  .admin-main {
+    grid-template-columns: 1fr;
+    padding: 16px 18px 22px;
+    overflow: auto;
+  }
+  .admin-list {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-secondary { justify-content: center; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .theme-toggle {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+  .admin-login { padding: 28px 22px; }
+  .admin-form-grid { grid-template-columns: 1fr; }
+  .admin-toolbar,
+  .admin-form-actions { flex-direction: column; align-items: stretch; }
+  .admin-button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body class="">
+
+
+
+
+
+
+<div id="site-root">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">×</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <div class="admin-shell" id="adminShell" aria-hidden="true">
+    <div class="admin-backdrop" data-admin-close></div>
+    <div class="admin-modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <button class="admin-close" type="button" data-admin-close aria-label="Close admin panel">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <div class="admin-login" id="adminLogin">
+        <h2 id="adminTitle">Admin Panel</h2>
+        <p>Login for Hussain Punawala website updates.</p>
+        <form id="adminLoginForm">
+          <label class="admin-field">
+            Email
+            <input type="email" id="adminEmail" autocomplete="username" required>
+          </label>
+          <label class="admin-field">
+            Password
+            <input type="password" id="adminPassword" autocomplete="current-password" required>
+          </label>
+          <button class="admin-button primary" type="submit">
+            <i class="fas fa-right-to-bracket" aria-hidden="true"></i> Login
+          </button>
+        </form>
+        <div class="admin-login-actions">
+          <button class="admin-link-button" type="button" id="adminForgot">Forgot password?</button>
+        </div>
+        <div class="admin-status" id="adminLoginStatus" role="status"></div>
+      </div>
+
+      <div class="admin-dashboard" id="adminDashboard" hidden>
+        <div class="admin-header">
+          <div class="admin-title">
+            <h2>Website Admin</h2>
+            <p id="adminCollectionSummary">Manage website media.</p>
+          </div>
+          <div class="admin-toolbar">
+            <button class="admin-button" type="button" id="adminAddItem"><i class="fas fa-plus" aria-hidden="true"></i> Add</button>
+            <button class="admin-button" type="button" id="adminExport"><i class="fas fa-download" aria-hidden="true"></i> Export HTML</button>
+            <button class="admin-button danger" type="button" id="adminReset"><i class="fas fa-rotate-left" aria-hidden="true"></i> Reset</button>
+            <button class="admin-button" type="button" id="adminLogout"><i class="fas fa-right-from-bracket" aria-hidden="true"></i> Logout</button>
+          </div>
+        </div>
+
+        <div class="admin-tabs" id="adminTabs" role="tablist" aria-label="Admin content sections">
+          <button class="admin-tab active" type="button" data-admin-tab="social">Social Results</button>
+          <button class="admin-tab" type="button" data-admin-tab="lead">Lead Results</button>
+          <button class="admin-tab" type="button" data-admin-tab="videos">Videos</button>
+          <button class="admin-tab" type="button" data-admin-tab="reviews">Reviews</button>
+          <button class="admin-tab" type="button" data-admin-tab="logos">Logos</button>
+        </div>
+
+        <div class="admin-main">
+          <div class="admin-list" id="adminList"></div>
+          <div class="admin-editor">
+            <form class="admin-form" id="adminItemForm">
+              <input type="hidden" id="adminItemId">
+
+              <div class="admin-preview" id="adminPreview"></div>
+
+              <label class="admin-field" data-admin-field="src">
+                <span id="adminSrcLabel">Media path</span>
+                <input type="text" id="adminSrc" placeholder="assets/folder/file.jpg">
+              </label>
+
+              <label class="admin-field" data-admin-field="file">
+                Upload file
+                <input type="file" id="adminFile" accept="image/*,video/*">
+              </label>
+
+              <div class="admin-form-grid">
+                <label class="admin-field" data-admin-field="platform">
+                  Platform
+                  <input type="text" id="adminPlatform">
+                </label>
+                <label class="admin-field" data-admin-field="title">
+                  Title
+                  <input type="text" id="adminItemTitle">
+                </label>
+              </div>
+
+              <label class="admin-field" data-admin-field="caption">
+                Caption
+                <input type="text" id="adminCaption">
+              </label>
+
+              <label class="admin-field" data-admin-field="reviewText">
+                Review text
+                <textarea id="adminReviewText"></textarea>
+              </label>
+
+              <div class="admin-form-grid">
+                <label class="admin-field" data-admin-field="author">
+                  Author
+                  <input type="text" id="adminAuthor">
+                </label>
+                <label class="admin-field" data-admin-field="role">
+                  Role
+                  <input type="text" id="adminRole">
+                </label>
+              </div>
+
+              <label class="admin-check">
+                <input type="checkbox" id="adminActive" checked>
+                Active on website
+              </label>
+
+              <div class="admin-form-actions">
+                <button class="admin-button primary" type="submit"><i class="fas fa-floppy-disk" aria-hidden="true"></i> Save Item</button>
+                <button class="admin-button" type="button" id="adminDuplicate"><i class="fas fa-copy" aria-hidden="true"></i> Duplicate</button>
+                <button class="admin-button danger" type="button" id="adminDelete"><i class="fas fa-trash" aria-hidden="true"></i> Remove</button>
+              </div>
+              <div class="admin-status" id="adminStatus" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav style="padding: 12px 60px;">
+    <a class="nav-logo" href="#hero">HP.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#social-results">Results</a></li>
+      <li><a href="#lead-gen">Leads</a></li>
+      <li><a href="#video-proof">Videos</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#social-results" onclick="toggleMenu()">Social Media Results</a>
+    <a href="#lead-gen" onclick="toggleMenu()">Lead Generation</a>
+    <a href="#video-proof" onclick="toggleMenu()">Video Proof</a>
+    <a href="#clients" onclick="toggleMenu()">Clients</a>
+    <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+    <a href="#contact" onclick="toggleMenu()">Hire Me</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Available for Projects</span>
+      </div>
+
+      <h1 class="hero-name">Hussain<br><span>Punawala</span></h1>
+      <p class="hero-title"><strong>Digital Marketing Expert</strong> - Lead Gen · Social Media · Content · Design</p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Clients Served</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Industries</span>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><i class="fab fa-whatsapp"></i> Let's Talk</a>
+        <a href="https://drive.google.com/drive/folders/1suhx3Lu9Ln-du8NSak5uMVYOhpllxw6P?usp=drive_link" target="_blank" class="btn-secondary"><i class="fas fa-file-alt"></i> View Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/hussain-punawala" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/hussainpuna/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/hussain.punawala.35" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/971506557560" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="fas fa-star"></i> Social Media Marketing</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Lead Generation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Graphic Design</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Video Editing</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> AI Video Creation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Copywriting</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Content Creation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Brand Strategy</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Social Media Marketing</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Lead Generation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Graphic Design</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Video Editing</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> AI Video Creation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Copywriting</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Content Creation</span>
+      <span class="marquee-item"><i class="fas fa-star"></i> Brand Strategy</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-in visible">
+        <div class="about-img-frame">
+          <img src="assets/profile/profile.jpg" alt="Hussain Punawala">
+        </div>
+        <div class="about-experience-badge">
+          <span class="num">4+</span>
+          <span class="label">Years of<br>Experience</span>
+        </div>
+      </div>
+
+      <div class="about-text fade-in visible">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Results-Driven<br><span>Digital Marketer</span></h2>
+        <div class="section-line"></div>
+        <p>I'm a results-driven Digital Marketer with a BBA and MBA in Marketing and over 4+ years of hands-on experience. I specialize in lead generation, social media marketing, content creation, graphic design, video editing, AI video creation, and copywriting.</p>
+        <p>I have successfully delivered impactful results for clients across industries including real estate, travel, e-commerce, logistics, facility management, and home appliances - helping businesses grow their brand visibility and generate consistent leads.</p>
+
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fas fa-chart-line"></i> Lead Generation</div>
+          <div class="skill-tag"><i class="fab fa-instagram"></i> Social Media</div>
+          <div class="skill-tag"><i class="fas fa-pen-nib"></i> Copywriting</div>
+          <div class="skill-tag"><i class="fas fa-palette"></i> Graphic Design</div>
+          <div class="skill-tag"><i class="fas fa-film"></i> Video Editing</div>
+          <div class="skill-tag"><i class="fas fa-robot"></i> AI Video Creation</div>
+          <div class="skill-tag"><i class="fas fa-bullhorn"></i> Content Creation</div>
+          <div class="skill-tag"><i class="fas fa-graduation-cap"></i> BBA + MBA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-results">
+    <div class="results-header fade-in visible">
+      <span class="section-tag">Proven Growth</span>
+      <h2 class="section-title">Social Media <span>Results</span></h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Real screenshots of real growth achieved for clients across different platforms and industries.</p>
+    </div>
+
+    <div class="screenshots-grid">
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-01.png" alt="Social media result screenshot 1">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> Facebook</div>
+          <h4>Views and reach growth in 1 month</h4>
+          <p>Al burraq</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-02.png" alt="Social media result screenshot 2">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> Linkedin</div>
+          <h4>Daily reach and impr</h4>
+          <p>next solutions</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-03.png" alt="Social media result screenshot 3">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> instagram</div>
+          <h4>Growth on all metrics</h4>
+          <p>al ussod</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-04.png" alt="Social media result screenshot 4">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> tiktok</div>
+          <h4>Increase in numbers</h4>
+          <p></p><h4 style="color: rgb(245, 240, 232);">next events</h4><p></p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-05.png" alt="Social media result screenshot 5">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> google analytics</div>
+          <h4>Huge traffic on web</h4>
+          <p>cultsport</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-06.png" alt="Social media result screenshot 6">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> Google ads</div>
+          <h4>More than 1.5B impr</h4>
+          <p>Sotc</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-07.jpg" alt="Social media result screenshot 7">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> Instagram</div>
+          <h4>Engagement on one of post</h4>
+          <p>next solutions events</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-08.png" alt="Social media result screenshot 8">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> facebook</div>
+          <h4>Engagement</h4>
+          <p>caryoka</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-09.png" alt="Social media result screenshot 9">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> facebook</div>
+          <h4>Engagement</h4>
+          <p>caryoka</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-10.jpg" alt="Social media result screenshot 10">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> facebook</div>
+          <h4>Engagement</h4>
+          <p>bluebell medical</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-11.png" alt="Social media result screenshot 11">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> instagram</div>
+          <h4>Engagement</h4>
+          <p>3XM realestate</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-12.jpg" alt="Social media result screenshot 12">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> instagram</div>
+          <h4>Engagement</h4>
+          <p>prime time business</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-13.jpg" alt="Social media result screenshot 13">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> instagram</div>
+          <h4>Social Media Results</h4>
+          <p>phantom ppf</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-14.jpg" alt="Social media result screenshot 14">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> instagram</div>
+          <h4>Social Media Results</h4>
+          <p>wallchic</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/social-results/social-15.jpg" alt="Social media result screenshot 15">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-chart-line"></i> meta ads</div>
+          <h4>Results</h4>
+          <p>Alusood</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lead-gen">
+    <div class="fade-in visible">
+      <span class="section-tag">Lead Generation</span>
+      <h2 class="section-title">Lead Generation <span>Results</span></h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Consistent, qualified leads delivered across real estate, e-commerce, logistics, and more.</p>
+    </div>
+
+    <div class="lead-grid">
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/lead-results/lead-01.png" alt="Paid ad lead generation result screenshot 1">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-ad"></i> Paid Ads Meta</div>
+          <h4>iscent</h4>
+          <p>CPL drop from 250 to 69</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/lead-results/lead-02.png" alt="Paid ad lead generation result screenshot 2">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-ad"></i> Paid Ads Meta</div>
+          <h4>Bluebell</h4>
+          <p>quality leads in less cpl</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/lead-results/lead-03.png" alt="Paid ad lead generation result screenshot 3">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-ad"></i> Paid Ads Shopify</div>
+          <h4>wallchic</h4>
+          <p>best sales from prv months</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/lead-results/lead-04.png" alt="Paid ad lead generation result screenshot 4">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-ad"></i> Paid Ads google</div>
+          <h4>wallchic</h4>
+          <p>cpl only 10 aed</p>
+        </div>
+      </div>
+
+      <div class="screenshot-card fade-in visible" onclick="openLightbox(this)">
+        <div class="screenshot-placeholder">
+          <img src="assets/lead-results/lead-05.png" alt="Paid ad lead generation result screenshot 5">
+        </div>
+        <div class="screenshot-info">
+          <div class="platform-tag"><i class="fas fa-ad"></i> Paid Ads meta</div>
+          <h4>caryoka</h4>
+          <p>Paid ad campaign result screenshot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-proof">
+    <div class="fade-in visible">
+      <span class="section-tag">Proof of Work</span>
+      <h2 class="section-title">Video <span>Proof</span></h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Screencasts and walkthroughs showing the accounts I have managed and delivered results for.</p>
+    </div>
+
+    <div class="video-grid">
+      
+
+      
+
+      
+    <div class="video-card fade-in visible">
+        <div class="video-thumb">
+          <video src="assets/videos/video-01.webm" controls="" preload="metadata"></video>
+        </div>
+        <div class="video-info">
+          <h4>Meta ads live proof</h4>
+          <p><br></p>
+        </div>
+      </div><div class="video-card fade-in visible">
+        <div class="video-thumb">
+          <video src="assets/videos/video-02.webm" controls="" preload="metadata"></video>
+        </div>
+        <div class="video-info">
+          <h4>Google ads live proof</h4>
+          <p><br></p>
+        </div>
+      </div></div>
+  </section>
+
+  <section id="clients">
+    <div class="clients-header fade-in visible">
+      <span class="section-tag">Trusted By</span>
+      <h2 class="section-title">50+ clients served across 6+ industries</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Brands and businesses I've had the pleasure of growing across 6+ industries.</p>
+    </div>
+
+    <div class="logo-marquee-stack">
+      <div class="logo-marquee-row" aria-label="Client logos row 1">
+        <div class="logo-marquee-track">
+          <div class="logo-marquee-set">
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-01.jpg" alt="Client logo 1"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-02.jpg" alt="Client logo 2"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-03.png" alt="Client logo 3"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-04.jpg" alt="Client logo 4"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-05.png" alt="Client logo 5"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-06.jpg" alt="Client logo 6"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-07.png" alt="Client logo 7"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-08.jpg" alt="Client logo 8"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-09.png" alt="Client logo 9"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-10.jpg" alt="Client logo 10"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-11.png" alt="Client logo 11"></div>
+          </div>
+          <div class="logo-marquee-set" aria-hidden="true">
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-01.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-02.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-03.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-04.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-05.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-06.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-07.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-08.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-09.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-10.jpg" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-11.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-marquee-row" aria-label="Client logos row 2">
+        <div class="logo-marquee-track reverse">
+          <div class="logo-marquee-set">
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-12.png" alt="Client logo 12"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-13.png" alt="Client logo 13"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-14.png" alt="Client logo 14"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-15.png" alt="Client logo 15"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-16.png" alt="Client logo 16"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-17.png" alt="Client logo 17"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-18.png" alt="Client logo 18"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-19.png" alt="Client logo 19"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-20.png" alt="Client logo 20"></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-21.png" alt="Client logo 21"></div>
+          </div>
+          <div class="logo-marquee-set" aria-hidden="true">
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-12.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-13.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-14.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-15.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-16.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-17.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-18.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-19.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-20.png" alt=""></div>
+            <div class="logo-marquee-item"><img src="assets/client-logos/logo-21.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="industry-tags fade-in visible">
+      <span class="industry-tag"><i class="fas fa-house"></i> Real Estate</span>
+      <span class="industry-tag"><i class="fas fa-plane"></i> Travel</span>
+      <span class="industry-tag"><i class="fas fa-cart-shopping"></i> E-Commerce</span>
+      <span class="industry-tag"><i class="fas fa-truck"></i> Logistics</span>
+      <span class="industry-tag"><i class="fas fa-building"></i> Facility Management</span>
+      <span class="industry-tag"><i class="fas fa-blender"></i> Home Appliances</span>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="fade-in visible">
+      <span class="section-tag">Client Love</span>
+      <h2 class="section-title">What Clients <span>Say</span></h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Real reviews from real clients. Screenshots speak louder than words.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-01.jpg" alt="Client review screenshot 1">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Alusood</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-02.png" alt="Client review screenshot 2">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Bluebell</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-03.jpg" alt="Client review screenshot 3">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Wallchic</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-04.png" alt="Client review screenshot 4">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">3xm realestate</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-05.png" alt="Client review screenshot 5">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Caryoka autocare</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-06.jpg" alt="Client review screenshot 6">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Phantom ppf</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in visible">
+        <div class="testimonial-screenshot" onclick="openLightbox(this)">
+          <img src="assets/client-reviews/review-07.png" alt="Client review screenshot 7">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Client feedback screenshot from completed work."</p>
+          <div class="testimonial-author">Walchic</div>
+          <div class="testimonial-role"><br></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-wrapper">
+      <div class="fade-in visible">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Work <span>Together</span></h2>
+        <div class="section-line"></div>
+        <p>Ready to grow your brand and generate consistent leads? Let's discuss how I can help your business.</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <label>Email</label>
+              <a href="mailto:Hussainpuna769@gmail.com">Hussainpuna769@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-detail">
+              <label>WhatsApp (UAE)</label>
+              <a href="https://wa.me/971506557560" target="_blank">+971 50 655 7560</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-detail">
+              <label>India Number</label>
+              <a href="tel:+917742731383">+91 77427 31383</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="contact-detail">
+              <label>Graphic Portfolio</label>
+              <a href="https://drive.google.com/drive/folders/1lpzH3fnVYBnpcDtq8AijiyqKThEJ0mcX?usp=drive_link" target="_blank">View Portfolio -&gt;</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="contact-detail">
+              <label>Resume</label>
+              <a href="https://drive.google.com/drive/folders/1suhx3Lu9Ln-du8NSak5uMVYOhpllxw6P?usp=drive_link" target="_blank">View Resume -&gt;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-links" style="margin-top:32px;">
+          <a href="https://www.linkedin.com/in/hussain-punawala" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/hussainpuna/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/hussain.punawala.35" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/971506557560" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="fade-in visible">
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name <span>*</span></label>
+              <input type="text" class="form-control" id="cf-name" placeholder="John Smith" required="">
+            </div>
+            <div class="form-group">
+              <label>Your Email <span>*</span></label>
+              <input type="email" class="form-control" id="cf-email" placeholder="john@company.com" required="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>WhatsApp / Phone <span>*</span></label>
+            <input type="tel" class="form-control" id="cf-phone" placeholder="+971 50 000 0000" required="">
+          </div>
+
+          <div class="form-group">
+            <label>Company / Business Name</label>
+            <input type="text" class="form-control" id="cf-company" placeholder="Your Company Name">
+          </div>
+
+          <div class="form-group">
+            <label>Service Required <span>*</span></label>
+            <div class="checkbox-group" id="serviceGroup">
+              <label class="checkbox-label" onclick="toggleService(this)">
+                <input type="checkbox" value="Social Media Marketing">
+                <i class="fab fa-instagram"></i> Social Media Marketing
+              </label>
+              <label class="checkbox-label" onclick="toggleService(this)">
+                <input type="checkbox" value="Lead Generation">
+                <i class="fas fa-funnel-dollar"></i> Lead Generation
+              </label>
+              <label class="checkbox-label" onclick="toggleService(this)">
+                <input type="checkbox" value="Web Design and Development">
+                <i class="fas fa-laptop-code"></i> Web Design &amp; Development
+              </label>
+              <label class="checkbox-label" onclick="toggleService(this)">
+                <input type="checkbox" value="Graphic Design">
+                <i class="fas fa-palette"></i> Graphic Design
+              </label>
+              <label class="checkbox-label" onclick="toggleService(this)">
+                <input type="checkbox" value="Video Editing">
+                <i class="fas fa-film"></i> Video Editing
+              </label>
+              <label class="checkbox-label" id="otherServiceLabel" onclick="toggleService(this, true)">
+                <input type="checkbox" value="Other">
+                <i class="fas fa-plus"></i> Other
+              </label>
+            </div>
+            <div class="other-input" id="otherInput">
+              <input type="text" class="form-control" id="cf-other-service" placeholder="Please describe the service you need...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Your Budget</label>
+            <select class="form-control" id="cf-budget">
+              <option value="" disabled="" selected="">Select budget range</option>
+              <option>Under $500 / month</option>
+              <option>$500 - $1,000 / month</option>
+              <option>$1,000 - $2,500 / month</option>
+              <option>$2,500 - $5,000 / month</option>
+              <option>$5,000+ / month</option>
+              <option>One-time project</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tell Me About Your Project</label>
+            <textarea class="form-control" id="cf-message" placeholder="Briefly describe your business goals and what you're looking to achieve..."></textarea>
+          </div>
+
+          <button type="button" class="form-submit" onclick="sendToWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+          </button>
+
+          <div class="whatsapp-note">
+            <i class="fab fa-whatsapp"></i>
+            <span>Your enquiry will be sent directly to Hussain's WhatsApp for a quick response.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Hussain Punawala</div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#social-results">Results</a>
+        <a href="#clients">Clients</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="https://drive.google.com/drive/folders/1suhx3Lu9Ln-du8NSak5uMVYOhpllxw6P?usp=drive_link" target="_blank">Resume</a>
+        <a href="https://drive.google.com/drive/folders/1lpzH3fnVYBnpcDtq8AijiyqKThEJ0mcX?usp=drive_link" target="_blank">Portfolio</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/hussain-punawala" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/hussainpuna/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/hussain.punawala.35" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/971506557560" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Hussain Punawala. All rights reserved.</p>
+      <p style="font-size:12px;color:var(--grey);">Digital Marketing Expert · Dubai, UAE</p>
+    </div>
+  </footer>
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+    <i class="fas fa-sun" aria-hidden="true"></i>
+  </button>
+</div>
+
+<script type="application/json" id="adminContentSeed"></script>
+<script>
+function qsa(selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); }
+
+function toggleMenu() {
+  var menu = document.getElementById('mobile-menu');
+  if (menu) menu.classList.toggle('open');
+}
+
+function getSavedTheme() {
+  try { return localStorage.getItem('hp-theme-mode'); }
+  catch (e) { return null; }
+}
+
+function saveTheme(mode) {
+  try { localStorage.setItem('hp-theme-mode', mode); }
+  catch (e) {}
+}
+
+function setThemeMode(mode) {
+  var isLight = mode === 'light';
+  var button = document.getElementById('themeToggle');
+  document.body.classList.toggle('light-mode', isLight);
+
+  if (button) {
+    var icon = button.querySelector('i');
+    button.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+    button.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    if (icon) icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+  }
+}
+
+function initThemeToggle() {
+  var button = document.getElementById('themeToggle');
+  var saved = getSavedTheme();
+  var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  var initialMode = saved || (prefersLight ? 'light' : 'dark');
+
+  setThemeMode(initialMode);
+  if (!button) return;
+
+  button.addEventListener('click', function() {
+    var nextMode = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+    setThemeMode(nextMode);
+    saveTheme(nextMode);
+  });
+}
+
+function initFadeObserver() {
+  var revealItems = qsa('.fade-in');
+  var staggerItems = qsa('.screenshot-card.fade-in, .video-card.fade-in, .testimonial-card.fade-in, .clients-header.fade-in, .industry-tags.fade-in');
+
+  revealItems.forEach(function(el) {
+    el.classList.remove('visible');
+  });
+
+  staggerItems.forEach(function(el, index) {
+    el.style.setProperty('--reveal-delay', ((index % 6) * 75) + 'ms');
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+  revealItems.forEach(function(el) { observer.observe(el); });
+}
+
+function animateCounter(el) {
+  if (el.dataset.counted === 'true') return;
+
+  var target = Number(el.dataset.countTarget || 0);
+  var suffix = el.dataset.countSuffix || '';
+  var duration = 1200;
+  var startTime = null;
+  el.dataset.counted = 'true';
+
+  function tick(timestamp) {
+    if (!startTime) startTime = timestamp;
+    var progress = Math.min((timestamp - startTime) / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+function initStatCounters() {
+  var stats = qsa('.stat-num');
+
+  stats.forEach(function(el) {
+    var text = el.textContent.trim();
+    var match = text.match(/^(\d+)(.*)$/);
+    if (!match) return;
+
+    el.dataset.countTarget = match[1];
+    el.dataset.countSuffix = match[2] || '';
+    el.textContent = '0' + (el.dataset.countSuffix || '');
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      qsa('.stat-num', entry.target).forEach(animateCounter);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.4 });
+
+  var statWrap = document.querySelector('.hero-stats');
+  if (statWrap) observer.observe(statWrap);
+}
+
+function openLightbox(card) {
+  var img = card.querySelector('img');
+  if (!img) return;
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function closeLightbox() {
+  var lightbox = document.getElementById('lightbox');
+  if (lightbox) lightbox.classList.remove('open');
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+function toggleService(label, isOther) {
+  label.classList.toggle('checked');
+  var cb = label.querySelector('input[type=checkbox]');
+  cb.checked = !cb.checked;
+  if (isOther) {
+    var otherInput = document.getElementById('otherInput');
+    otherInput.classList.toggle('show', cb.checked);
+  }
+}
+
+function sendToWhatsApp() {
+  var name = document.getElementById('cf-name').value.trim();
+  var email = document.getElementById('cf-email').value.trim();
+  var phone = document.getElementById('cf-phone').value.trim();
+  var company = document.getElementById('cf-company').value.trim();
+  var budget = document.getElementById('cf-budget').value;
+  var message = document.getElementById('cf-message').value.trim();
+
+  if (!name || !email || !phone) {
+    alert('Please fill in your name, email, and phone number.');
+    return;
+  }
+
+  var services = [];
+  qsa('#serviceGroup .checkbox-label.checked input').forEach(function(cb) {
+    services.push(cb.value);
+  });
+  var otherService = document.getElementById('cf-other-service').value.trim();
+  if (otherService) services.push('Other: ' + otherService);
+
+  if (services.length === 0) {
+    alert('Please select at least one service.');
+    return;
+  }
+
+  var text =
+    '*New Enquiry from Portfolio Website*\n\n' +
+    '*Name:* ' + name + '\n' +
+    '*Email:* ' + email + '\n' +
+    '*Phone:* ' + phone + '\n' +
+    (company ? '*Company:* ' + company + '\n' : '') +
+    '*Services Required:* ' + services.join(', ') + '\n' +
+    (budget ? '*Budget:* ' + budget + '\n' : '') +
+    (message ? '*Message:* ' + message : '');
+
+  window.open('https://wa.me/971506557560?text=' + encodeURIComponent(text), '_blank');
+}
+
+var ADMIN_EMAIL = 'hussainpunawala1@gmail.com';
+var ADMIN_PASS_HASH = '05d75a41c2fb799040d115884e4b1515b29341aa5ab0a18d5b9d1b98c8099932';
+var ADMIN_PASS_FALLBACK = 'SHVzbjEyMzRAJQ==';
+var ADMIN_CONTENT_KEY = 'hp-admin-content-v2';
+var ADMIN_SESSION_KEY = 'hp-admin-session-v1';
+var adminContent = null;
+var adminOriginalContent = null;
+var adminCurrentCollection = 'social';
+var adminSelectedId = null;
+
+var ADMIN_COLLECTIONS = {
+  social: {
+    label: 'Social Results',
+    summary: 'Social proof screenshots, active state, and order.',
+    gridSelector: '.screenshots-grid',
+    media: 'image',
+    icon: 'fas fa-chart-line',
+    fields: ['src', 'file', 'platform', 'title', 'caption']
+  },
+  lead: {
+    label: 'Lead Results',
+    summary: 'Lead generation screenshots, active state, and order.',
+    gridSelector: '.lead-grid',
+    media: 'image',
+    icon: 'fas fa-ad',
+    fields: ['src', 'file', 'platform', 'title', 'caption']
+  },
+  videos: {
+    label: 'Videos',
+    summary: 'Video proof clips, active state, and order.',
+    gridSelector: '.video-grid',
+    media: 'video',
+    icon: 'fas fa-film',
+    fields: ['src', 'file', 'title', 'caption']
+  },
+  reviews: {
+    label: 'Reviews',
+    summary: 'Client review screenshots, active state, and order.',
+    gridSelector: '.testimonials-grid',
+    media: 'image',
+    icon: 'fas fa-star',
+    fields: ['src', 'file', 'reviewText', 'author', 'role']
+  },
+  logos: {
+    label: 'Logos',
+    summary: 'Client logos, active state, and order.',
+    gridSelector: '.logo-marquee-stack',
+    media: 'logo',
+    icon: 'fas fa-building',
+    fields: ['src', 'file', 'title']
+  }
+};
+
+function adminEl(id) {
+  return document.getElementById(id);
+}
+
+function adminText(el) {
+  return el ? el.textContent.trim() : '';
+}
+
+function adminAttr(el, attr) {
+  return el ? (el.getAttribute(attr) || '') : '';
+}
+
+function adminEscape(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function adminClone(value) {
+  return JSON.parse(JSON.stringify(value || {}));
+}
+
+function adminReadStorage(key) {
+  try { return localStorage.getItem(key); }
+  catch (e) { return null; }
+}
+
+function adminWriteStorage(key, value) {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function adminRemoveStorage(key) {
+  try { localStorage.removeItem(key); }
+  catch (e) {}
+}
+
+function adminSetStatus(targetId, message, isError) {
+  var target = adminEl(targetId || 'adminStatus');
+  if (!target) return;
+  target.textContent = message || '';
+  target.classList.toggle('is-error', !!isError);
+}
+
+function adminMakeId(prefix, index) {
+  return prefix + '-' + Date.now().toString(36) + '-' + (index || 0) + '-' + Math.random().toString(36).slice(2, 7);
+}
+
+function adminBufferToHex(buffer) {
+  var bytes = new Uint8Array(buffer);
+  var hex = [];
+  bytes.forEach(function(byte) {
+    hex.push(byte.toString(16).padStart(2, '0'));
+  });
+  return hex.join('');
+}
+
+function adminSha256(text) {
+  if (!window.crypto || !window.crypto.subtle || !window.TextEncoder) return Promise.resolve(null);
+  return window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(adminBufferToHex);
+}
+
+function adminVerifyPassword(password) {
+  return adminSha256(password).then(function(hash) {
+    if (hash) return hash === ADMIN_PASS_HASH;
+    try { return password === atob(ADMIN_PASS_FALLBACK); }
+    catch (e) { return false; }
+  });
+}
+
+function adminScrapeResults(gridSelector, prefix, iconClass) {
+  var grid = document.querySelector(gridSelector);
+  if (!grid) return [];
+
+  return qsa('.screenshot-card', grid).map(function(card, index) {
+    var img = card.querySelector('img');
+    var info = card.querySelector('.screenshot-info');
+    var platform = info ? info.querySelector('.platform-tag') : null;
+    var icon = platform ? platform.querySelector('i') : null;
+    return {
+      id: adminMakeId(prefix, index),
+      active: true,
+      src: adminAttr(img, 'src'),
+      alt: adminAttr(img, 'alt'),
+      icon: icon ? adminAttr(icon, 'class') : iconClass,
+      platform: adminText(platform),
+      title: adminText(info ? info.querySelector('h4') : null),
+      caption: adminText(info ? info.querySelector('p') : null)
+    };
+  });
+}
+
+function adminScrapeVideos() {
+  var grid = document.querySelector('.video-grid');
+  if (!grid) return [];
+
+  return qsa('.video-card', grid).map(function(card, index) {
+    var video = card.querySelector('video');
+    var info = card.querySelector('.video-info');
+    return {
+      id: adminMakeId('video', index),
+      active: true,
+      src: adminAttr(video, 'src'),
+      title: adminText(info ? info.querySelector('h4') : null),
+      caption: adminText(info ? info.querySelector('p') : null)
+    };
+  });
+}
+
+function adminScrapeReviews() {
+  var grid = document.querySelector('.testimonials-grid');
+  if (!grid) return [];
+
+  return qsa('.testimonial-card', grid).map(function(card, index) {
+    var img = card.querySelector('img');
+    return {
+      id: adminMakeId('review', index),
+      active: true,
+      src: adminAttr(img, 'src'),
+      alt: adminAttr(img, 'alt'),
+      text: adminText(card.querySelector('.testimonial-text')),
+      author: adminText(card.querySelector('.testimonial-author')),
+      role: adminText(card.querySelector('.testimonial-role'))
+    };
+  });
+}
+
+function adminScrapeLogos() {
+  var logos = [];
+  qsa('.logo-marquee-row').forEach(function(row) {
+    var set = row.querySelector('.logo-marquee-set:not([aria-hidden])') || row.querySelector('.logo-marquee-set');
+    qsa('.logo-marquee-item img', set).forEach(function(img) {
+      logos.push({
+        id: adminMakeId('logo', logos.length),
+        active: true,
+        src: adminAttr(img, 'src'),
+        title: adminAttr(img, 'alt') || ('Client logo ' + (logos.length + 1)),
+        alt: adminAttr(img, 'alt')
+      });
+    });
+  });
+  return logos;
+}
+
+function adminScrapeContent() {
+  return {
+    social: adminScrapeResults('.screenshots-grid', 'social', 'fas fa-chart-line'),
+    lead: adminScrapeResults('.lead-grid', 'lead', 'fas fa-ad'),
+    videos: adminScrapeVideos(),
+    reviews: adminScrapeReviews(),
+    logos: adminScrapeLogos()
+  };
+}
+
+function adminReadSeedContent() {
+  var seed = adminEl('adminContentSeed');
+  var text = seed ? seed.textContent.trim() : '';
+  if (!text) return null;
+  try { return JSON.parse(text); }
+  catch (e) { return null; }
+}
+
+function adminReadStoredContent() {
+  var text = adminReadStorage(ADMIN_CONTENT_KEY);
+  if (!text) return null;
+  try { return JSON.parse(text); }
+  catch (e) { return null; }
+}
+
+function adminNormalizeItem(key, item, index) {
+  var config = ADMIN_COLLECTIONS[key];
+  item.id = item.id || adminMakeId(key, index);
+  item.active = item.active !== false;
+  item.src = item.src || '';
+  item.title = item.title || '';
+  item.caption = item.caption || '';
+  item.platform = item.platform || '';
+  item.icon = item.icon || config.icon;
+  item.alt = item.alt || item.title || item.author || config.label;
+  item.text = item.text || '';
+  item.author = item.author || '';
+  item.role = item.role || '';
+  return item;
+}
+
+function adminNormalizeContent(content) {
+  var normalized = content || {};
+  Object.keys(ADMIN_COLLECTIONS).forEach(function(key) {
+    if (!Array.isArray(normalized[key])) normalized[key] = [];
+    normalized[key] = normalized[key].map(function(item, index) {
+      return adminNormalizeItem(key, item || {}, index);
+    });
+  });
+  return normalized;
+}
+
+function adminPersistContent() {
+  var saved = adminWriteStorage(ADMIN_CONTENT_KEY, JSON.stringify(adminContent));
+  if (!saved) {
+    adminSetStatus('adminStatus', 'Could not save. Use asset paths or smaller uploads.', true);
+  }
+  return saved;
+}
+
+function adminActiveItems(key) {
+  return (adminContent[key] || []).filter(function(item) {
+    return item.active !== false;
+  });
+}
+
+function adminRenderResultCollection(key) {
+  var config = ADMIN_COLLECTIONS[key];
+  var grid = document.querySelector(config.gridSelector);
+  if (!grid) return;
+
+  grid.innerHTML = adminActiveItems(key).map(function(item, index) {
+    var src = adminEscape(item.src);
+    var img = src ? '<img src="' + src + '" alt="' + adminEscape(item.alt || item.title || config.label) + '">' : '<i class="fas fa-image"></i>';
+    return '' +
+      '<div class="screenshot-card fade-in visible" data-admin-id="' + adminEscape(item.id) + '" onclick="openLightbox(this)">' +
+        '<div class="screenshot-placeholder">' + img + '</div>' +
+        '<div class="screenshot-info">' +
+          '<div class="platform-tag"><i class="' + adminEscape(item.icon || config.icon) + '"></i> ' + adminEscape(item.platform || config.label) + '</div>' +
+          '<h4>' + adminEscape(item.title || (config.label + ' ' + (index + 1))) + '</h4>' +
+          '<p>' + adminEscape(item.caption || '') + '</p>' +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function adminRenderVideos() {
+  var grid = document.querySelector('.video-grid');
+  if (!grid) return;
+
+  grid.innerHTML = adminActiveItems('videos').map(function(item, index) {
+    var src = adminEscape(item.src);
+    var media = src ? '<video src="' + src + '" controls preload="metadata"></video>' : '<i class="fas fa-film"></i>';
+    return '' +
+      '<div class="video-card fade-in visible" data-admin-id="' + adminEscape(item.id) + '">' +
+        '<div class="video-thumb">' + media + '</div>' +
+        '<div class="video-info">' +
+          '<h4>' + adminEscape(item.title || ('Video proof ' + (index + 1))) + '</h4>' +
+          '<p>' + adminEscape(item.caption || '') + '</p>' +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function adminRenderReviews() {
+  var grid = document.querySelector('.testimonials-grid');
+  if (!grid) return;
+
+  grid.innerHTML = adminActiveItems('reviews').map(function(item, index) {
+    var src = adminEscape(item.src);
+    var img = src ? '<img src="' + src + '" alt="' + adminEscape(item.alt || item.author || 'Client review') + '">' : '<i class="fas fa-message"></i>';
+    return '' +
+      '<div class="testimonial-card fade-in visible" data-admin-id="' + adminEscape(item.id) + '">' +
+        '<div class="testimonial-screenshot" onclick="openLightbox(this)">' + img + '</div>' +
+        '<div class="testimonial-content">' +
+          '<div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>' +
+          '<p class="testimonial-text">' + adminEscape(item.text || '"Client feedback screenshot from completed work."') + '</p>' +
+          '<div class="testimonial-author">' + adminEscape(item.author || ('Client ' + (index + 1))) + '</div>' +
+          '<div class="testimonial-role">' + adminEscape(item.role || '') + '</div>' +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function adminLogoSetHtml(items, hidden) {
+  return '<div class="logo-marquee-set"' + (hidden ? ' aria-hidden="true"' : '') + '>' +
+    items.map(function(item, index) {
+      return '<div class="logo-marquee-item"><img src="' + adminEscape(item.src) + '" alt="' + (hidden ? '' : adminEscape(item.alt || item.title || ('Client logo ' + (index + 1)))) + '"></div>';
+    }).join('') +
+  '</div>';
+}
+
+function adminRenderLogos() {
+  var stack = document.querySelector('.logo-marquee-stack');
+  if (!stack) return;
+
+  var logos = adminActiveItems('logos');
+  if (!logos.length) {
+    stack.innerHTML = '';
+    return;
+  }
+
+  var midpoint = Math.ceil(logos.length / 2);
+  var rows = [logos.slice(0, midpoint), logos.slice(midpoint)].filter(function(row) { return row.length; });
+  stack.innerHTML = rows.map(function(row, index) {
+    return '' +
+      '<div class="logo-marquee-row" aria-label="Client logos row ' + (index + 1) + '">' +
+        '<div class="logo-marquee-track' + (index % 2 ? ' reverse' : '') + '">' +
+          adminLogoSetHtml(row, false) +
+          adminLogoSetHtml(row, true) +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function adminRenderAllContent() {
+  if (!adminContent) return;
+  adminRenderResultCollection('social');
+  adminRenderResultCollection('lead');
+  adminRenderVideos();
+  adminRenderReviews();
+  adminRenderLogos();
+}
+
+function adminGetItems() {
+  return adminContent[adminCurrentCollection] || [];
+}
+
+function adminFindItem(id) {
+  var items = adminGetItems();
+  for (var i = 0; i < items.length; i += 1) {
+    if (items[i].id === id) return items[i];
+  }
+  return null;
+}
+
+function adminCurrentConfig() {
+  return ADMIN_COLLECTIONS[adminCurrentCollection];
+}
+
+function adminItemLabel(item) {
+  if (!item) return '';
+  if (adminCurrentCollection === 'reviews') return item.author || item.text || 'Review';
+  if (adminCurrentCollection === 'logos') return item.title || item.alt || 'Client logo';
+  return item.title || item.platform || 'Untitled item';
+}
+
+function adminItemMeta(item) {
+  if (!item) return '';
+  if (adminCurrentCollection === 'reviews') return item.role || item.src || 'Review screenshot';
+  if (adminCurrentCollection === 'logos') return item.src || 'Logo image';
+  if (adminCurrentCollection === 'videos') return item.caption || item.src || 'Video';
+  return item.platform || item.caption || item.src || 'Result';
+}
+
+function adminThumbHtml(item, config) {
+  if (config.media === 'video') {
+    return '<div class="admin-thumb"><i class="fas fa-film"></i></div>';
+  }
+  if (item.src) {
+    return '<img class="admin-thumb' + (config.media === 'logo' ? ' logo' : '') + '" src="' + adminEscape(item.src) + '" alt="">';
+  }
+  return '<div class="admin-thumb"><i class="' + adminEscape(config.icon) + '"></i></div>';
+}
+
+function adminRenderList() {
+  var list = adminEl('adminList');
+  var items = adminGetItems();
+  var config = adminCurrentConfig();
+  if (!list) return;
+
+  if (!items.length) {
+    list.innerHTML = '<div class="admin-empty">No items yet.</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(function(item, index) {
+    return '' +
+      '<div class="admin-list-row' + (item.id === adminSelectedId ? ' active' : '') + (item.active === false ? ' inactive' : '') + '" data-admin-id="' + adminEscape(item.id) + '">' +
+        adminThumbHtml(item, config) +
+        '<div>' +
+          '<span class="admin-row-title">' + adminEscape(adminItemLabel(item)) + '</span>' +
+          '<span class="admin-row-meta">' + adminEscape(adminItemMeta(item)) + '</span>' +
+        '</div>' +
+        '<div class="admin-row-actions">' +
+          '<button class="admin-icon-button" type="button" data-admin-action="up" aria-label="Move up"><i class="fas fa-arrow-up"></i></button>' +
+          '<button class="admin-icon-button" type="button" data-admin-action="down" aria-label="Move down"><i class="fas fa-arrow-down"></i></button>' +
+          '<button class="admin-icon-button" type="button" data-admin-action="toggle" aria-label="Toggle active"><i class="fas ' + (item.active === false ? 'fa-eye-slash' : 'fa-eye') + '"></i></button>' +
+        '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function adminSetFieldVisibility() {
+  var config = adminCurrentConfig();
+  qsa('[data-admin-field]').forEach(function(field) {
+    var name = field.getAttribute('data-admin-field');
+    field.style.display = config.fields.indexOf(name) >= 0 ? '' : 'none';
+  });
+
+  var srcLabel = adminEl('adminSrcLabel');
+  var file = adminEl('adminFile');
+  if (srcLabel) {
+    srcLabel.textContent = config.media === 'video' ? 'Video path' : (config.media === 'logo' ? 'Logo image path' : 'Image path');
+  }
+  if (file) file.setAttribute('accept', config.media === 'video' ? 'video/*' : 'image/*');
+}
+
+function adminUpdatePreview() {
+  var preview = adminEl('adminPreview');
+  var src = adminEl('adminSrc') ? adminEl('adminSrc').value.trim() : '';
+  var config = adminCurrentConfig();
+  if (!preview) return;
+
+  if (!src) {
+    preview.innerHTML = '<span class="admin-empty">No media selected.</span>';
+    return;
+  }
+
+  if (config.media === 'video') {
+    preview.innerHTML = '<video src="' + adminEscape(src) + '" controls preload="metadata"></video>';
+  } else {
+    preview.innerHTML = '<img src="' + adminEscape(src) + '" alt="">';
+  }
+}
+
+function adminFillForm(item) {
+  adminSetFieldVisibility();
+  adminEl('adminItemId').value = item ? item.id : '';
+  adminEl('adminSrc').value = item ? (item.src || '') : '';
+  adminEl('adminPlatform').value = item ? (item.platform || '') : '';
+  adminEl('adminItemTitle').value = item ? (item.title || item.alt || '') : '';
+  adminEl('adminCaption').value = item ? (item.caption || '') : '';
+  adminEl('adminReviewText').value = item ? (item.text || '') : '';
+  adminEl('adminAuthor').value = item ? (item.author || '') : '';
+  adminEl('adminRole').value = item ? (item.role || '') : '';
+  adminEl('adminActive').checked = item ? item.active !== false : true;
+  adminUpdatePreview();
+}
+
+function adminSelectItem(id) {
+  var item = adminFindItem(id);
+  adminSelectedId = item ? item.id : null;
+  adminFillForm(item);
+  adminRenderList();
+  adminSetStatus('adminStatus', '', false);
+}
+
+function adminSelectFirstItem() {
+  var items = adminGetItems();
+  adminSelectItem(items.length ? items[0].id : null);
+}
+
+function adminRenderTabs() {
+  qsa('[data-admin-tab]').forEach(function(tab) {
+    tab.classList.toggle('active', tab.getAttribute('data-admin-tab') === adminCurrentCollection);
+  });
+}
+
+function adminRenderPanel() {
+  var config = adminCurrentConfig();
+  var summary = adminEl('adminCollectionSummary');
+  if (summary) summary.textContent = config.summary;
+  adminRenderTabs();
+  adminRenderList();
+  if (!adminFindItem(adminSelectedId)) adminSelectFirstItem();
+  else adminFillForm(adminFindItem(adminSelectedId));
+}
+
+function adminNewItem() {
+  var key = adminCurrentCollection;
+  var config = adminCurrentConfig();
+  var item = adminNormalizeItem(key, {
+    id: adminMakeId(key, adminGetItems().length),
+    active: true,
+    src: '',
+    icon: config.icon
+  }, adminGetItems().length);
+
+  if (key === 'social') {
+    item.platform = 'Social Media';
+    item.title = 'New social result';
+  } else if (key === 'lead') {
+    item.platform = 'Paid Ads';
+    item.title = 'New lead result';
+  } else if (key === 'videos') {
+    item.title = 'New video proof';
+  } else if (key === 'reviews') {
+    item.text = '"Client feedback screenshot from completed work."';
+    item.author = 'Client name';
+  } else if (key === 'logos') {
+    item.title = 'Client logo';
+    item.alt = 'Client logo';
+  }
+
+  return item;
+}
+
+function adminAddItem() {
+  var item = adminNewItem();
+  adminGetItems().push(item);
+  adminPersistContent();
+  adminRenderAllContent();
+  adminSelectItem(item.id);
+  adminSetStatus('adminStatus', 'Item added.', false);
+}
+
+function adminSaveCurrentItem(event) {
+  if (event) event.preventDefault();
+  var id = adminEl('adminItemId').value;
+  var item = adminFindItem(id);
+  if (!item) {
+    item = adminNewItem();
+    adminGetItems().push(item);
+    adminSelectedId = item.id;
+  }
+
+  item.src = adminEl('adminSrc').value.trim();
+  item.active = adminEl('adminActive').checked;
+  item.platform = adminEl('adminPlatform').value.trim();
+  item.title = adminEl('adminItemTitle').value.trim();
+  item.caption = adminEl('adminCaption').value.trim();
+  item.text = adminEl('adminReviewText').value.trim();
+  item.author = adminEl('adminAuthor').value.trim();
+  item.role = adminEl('adminRole').value.trim();
+  item.alt = item.title || item.author || adminCurrentConfig().label;
+  item.icon = item.icon || adminCurrentConfig().icon;
+
+  if (adminPersistContent()) {
+    adminRenderAllContent();
+    adminRenderPanel();
+    adminSetStatus('adminStatus', 'Saved.', false);
+  }
+}
+
+function adminDuplicateItem() {
+  var item = adminFindItem(adminSelectedId);
+  if (!item) return;
+  var items = adminGetItems();
+  var index = items.indexOf(item);
+  var copy = adminClone(item);
+  copy.id = adminMakeId(adminCurrentCollection, items.length);
+  copy.title = copy.title ? (copy.title + ' copy') : copy.title;
+  items.splice(index + 1, 0, copy);
+  adminPersistContent();
+  adminRenderAllContent();
+  adminSelectItem(copy.id);
+  adminSetStatus('adminStatus', 'Duplicated.', false);
+}
+
+function adminDeleteItem() {
+  var item = adminFindItem(adminSelectedId);
+  if (!item) return;
+  if (!window.confirm('Remove this item from the admin list?')) return;
+  var items = adminGetItems();
+  items.splice(items.indexOf(item), 1);
+  adminPersistContent();
+  adminRenderAllContent();
+  adminSelectedId = null;
+  adminRenderPanel();
+  adminSetStatus('adminStatus', 'Removed.', false);
+}
+
+function adminMoveItem(id, direction) {
+  var items = adminGetItems();
+  var item = adminFindItem(id);
+  var index = items.indexOf(item);
+  var nextIndex = direction === 'up' ? index - 1 : index + 1;
+  if (!item || nextIndex < 0 || nextIndex >= items.length) return;
+  items[index] = items[nextIndex];
+  items[nextIndex] = item;
+  adminPersistContent();
+  adminRenderAllContent();
+  adminSelectItem(item.id);
+}
+
+function adminToggleItem(id) {
+  var item = adminFindItem(id);
+  if (!item) return;
+  item.active = item.active === false;
+  adminPersistContent();
+  adminRenderAllContent();
+  adminSelectItem(item.id);
+}
+
+function adminHandleListClick(event) {
+  var action = event.target.closest('[data-admin-action]');
+  var row = event.target.closest('[data-admin-id]');
+  if (!row) return;
+
+  var id = row.getAttribute('data-admin-id');
+  if (action) {
+    event.preventDefault();
+    event.stopPropagation();
+    var name = action.getAttribute('data-admin-action');
+    if (name === 'up' || name === 'down') adminMoveItem(id, name);
+    if (name === 'toggle') adminToggleItem(id);
+    return;
+  }
+
+  adminSelectItem(id);
+}
+
+function adminHandleFileSelect(event) {
+  var file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  var reader = new FileReader();
+  reader.onload = function() {
+    adminEl('adminSrc').value = reader.result;
+    adminUpdatePreview();
+    adminSetStatus('adminStatus', 'File loaded. Save item to apply.', false);
+  };
+  reader.onerror = function() {
+    adminSetStatus('adminStatus', 'File could not be loaded.', true);
+  };
+  reader.readAsDataURL(file);
+}
+
+function adminRequestPasswordReset() {
+  var enteredEmail = (adminEl('adminEmail').value || '').trim().toLowerCase();
+  if (enteredEmail && enteredEmail !== ADMIN_EMAIL) {
+    adminSetStatus('adminLoginStatus', 'Reset link can only go to ' + ADMIN_EMAIL + '.', true);
+    return;
+  }
+
+  var subject = 'Password reset link for website admin';
+  var body = 'Please send the admin password reset link to ' + ADMIN_EMAIL + ' only.';
+  window.location.href = 'mailto:' + ADMIN_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  adminSetStatus('adminLoginStatus', 'Reset request opened for ' + ADMIN_EMAIL + '.', false);
+}
+
+function adminSetAuthenticated(isAuthenticated) {
+  var shell = adminEl('adminShell');
+  var login = adminEl('adminLogin');
+  var dashboard = adminEl('adminDashboard');
+  if (!shell || !login || !dashboard) return;
+
+  shell.classList.toggle('is-authenticated', !!isAuthenticated);
+  login.hidden = !!isAuthenticated;
+  dashboard.hidden = !isAuthenticated;
+  if (isAuthenticated) {
+    adminWriteStorage(ADMIN_SESSION_KEY, '1');
+    adminRenderPanel();
+  } else {
+    adminRemoveStorage(ADMIN_SESSION_KEY);
+  }
+}
+
+function adminOpenPanel() {
+  var shell = adminEl('adminShell');
+  if (!shell) return;
+
+  shell.classList.add('open');
+  shell.setAttribute('aria-hidden', 'false');
+  adminSetAuthenticated(adminReadStorage(ADMIN_SESSION_KEY) === '1');
+  if (adminEl('adminEmail')) adminEl('adminEmail').value = ADMIN_EMAIL;
+  setTimeout(function() {
+    var target = adminReadStorage(ADMIN_SESSION_KEY) === '1' ? adminEl('adminAddItem') : adminEl('adminPassword');
+    if (target) target.focus();
+  }, 0);
+}
+
+function adminClosePanel() {
+  var shell = adminEl('adminShell');
+  if (!shell) return;
+  shell.classList.remove('open');
+  shell.setAttribute('aria-hidden', 'true');
+}
+
+function adminHandleLogin(event) {
+  event.preventDefault();
+  var email = (adminEl('adminEmail').value || '').trim().toLowerCase();
+  var password = adminEl('adminPassword').value || '';
+  adminSetStatus('adminLoginStatus', 'Checking login...', false);
+
+  if (email !== ADMIN_EMAIL) {
+    adminSetStatus('adminLoginStatus', 'Use ' + ADMIN_EMAIL + ' to login.', true);
+    return;
+  }
+
+  adminVerifyPassword(password).then(function(valid) {
+    if (!valid) {
+      adminSetStatus('adminLoginStatus', 'Incorrect password.', true);
+      return;
+    }
+    adminEl('adminPassword').value = '';
+    adminSetStatus('adminLoginStatus', '', false);
+    adminSetAuthenticated(true);
+  });
+}
+
+function adminSafeJson(value) {
+  return JSON.stringify(value).replace(/</g, '\\u003c');
+}
+
+function adminExportHtml() {
+  adminRenderAllContent();
+  var clone = document.documentElement.cloneNode(true);
+  var seed = clone.querySelector('#adminContentSeed');
+  var shell = clone.querySelector('#adminShell');
+  var dashboard = clone.querySelector('#adminDashboard');
+  var login = clone.querySelector('#adminLogin');
+
+  if (seed) seed.textContent = adminSafeJson(adminContent);
+  if (shell) {
+    shell.classList.remove('open', 'is-authenticated');
+    shell.setAttribute('aria-hidden', 'true');
+  }
+  if (dashboard) dashboard.setAttribute('hidden', '');
+  if (login) login.removeAttribute('hidden');
+
+  var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+  var blob = new Blob([html], { type: 'text/html' });
+  var link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'hussain-punawala-portfolio-publicnews.html';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(function() { URL.revokeObjectURL(link.href); }, 500);
+  adminSetStatus('adminStatus', 'HTML exported.', false);
+}
+
+function adminResetContent() {
+  if (!window.confirm('Reset admin content to the saved page content?')) return;
+  adminRemoveStorage(ADMIN_CONTENT_KEY);
+  adminContent = adminClone(adminOriginalContent);
+  adminNormalizeContent(adminContent);
+  adminSelectedId = null;
+  adminRenderAllContent();
+  adminRenderPanel();
+  adminSetStatus('adminStatus', 'Content reset.', false);
+}
+
+function initAdminPanel() {
+  adminOriginalContent = adminNormalizeContent(adminReadSeedContent() || adminScrapeContent());
+  adminContent = adminNormalizeContent(adminReadStoredContent() || adminClone(adminOriginalContent));
+  adminRenderAllContent();
+
+  if (adminEl('adminOpen')) adminEl('adminOpen').addEventListener('click', adminOpenPanel);
+  qsa('[data-admin-close]').forEach(function(button) {
+    button.addEventListener('click', adminClosePanel);
+  });
+  if (adminEl('adminLoginForm')) adminEl('adminLoginForm').addEventListener('submit', adminHandleLogin);
+  if (adminEl('adminForgot')) adminEl('adminForgot').addEventListener('click', adminRequestPasswordReset);
+  if (adminEl('adminList')) adminEl('adminList').addEventListener('click', adminHandleListClick);
+  if (adminEl('adminItemForm')) adminEl('adminItemForm').addEventListener('submit', adminSaveCurrentItem);
+  if (adminEl('adminAddItem')) adminEl('adminAddItem').addEventListener('click', adminAddItem);
+  if (adminEl('adminDuplicate')) adminEl('adminDuplicate').addEventListener('click', adminDuplicateItem);
+  if (adminEl('adminDelete')) adminEl('adminDelete').addEventListener('click', adminDeleteItem);
+  if (adminEl('adminExport')) adminEl('adminExport').addEventListener('click', adminExportHtml);
+  if (adminEl('adminReset')) adminEl('adminReset').addEventListener('click', adminResetContent);
+  if (adminEl('adminLogout')) {
+    adminEl('adminLogout').addEventListener('click', function() {
+      adminSetAuthenticated(false);
+      adminSetStatus('adminLoginStatus', 'Logged out.', false);
+    });
+  }
+  if (adminEl('adminFile')) adminEl('adminFile').addEventListener('change', adminHandleFileSelect);
+  if (adminEl('adminSrc')) adminEl('adminSrc').addEventListener('input', adminUpdatePreview);
+
+  qsa('[data-admin-tab]').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      adminCurrentCollection = tab.getAttribute('data-admin-tab');
+      adminSelectedId = null;
+      adminRenderPanel();
+    });
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') adminClosePanel();
+  });
+
+  if (window.location.hash === '#admin' || window.location.search.indexOf('admin=1') >= 0) {
+    window.location.href = 'admin/';
+  }
+}
+
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  var scrolled = window.scrollY > 60;
+  var mobile = window.innerWidth <= 900;
+  nav.style.padding = scrolled ? (mobile ? '12px 24px' : '12px 60px') : (mobile ? '16px 24px' : '20px 60px');
+});
+
+initThemeToggle();
+initAdminPanel();
+initStatCounters();
+initFadeObserver();
+</script>
+
+
+</body></html>
